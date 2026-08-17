@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="健身房器械使用指南：有氧器械、固定器械、自由重量、自重训练的动作要领、注意事项与常见错误">
   <title>健身房器械使用指南</title>
-  <link rel="stylesheet" href="css/style.css?v=24">
+  <link rel="stylesheet" href="css/style.css?v=25">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏋️</text></svg>">
   <link rel="manifest" href="manifest.webmanifest">
   <meta name="theme-color" content="#10b981">
@@ -62,10 +62,6 @@
       <div class="stat"><b id="stat-total">65</b><span>经典动作</span></div>
       <div class="stat"><b id="stat-cat">9</b><span>训练部位</span></div>
       <div class="stat"><b>100%</b><span>动图演示</span></div>
-    </div>
-    <div class="app-download">
-      <a class="app-btn" href="downloads/gymguide.apk" download>📱 下载安卓 App</a>
-      <span class="app-tip">离线可用 · 图标直达 · 手机上体验更顺滑</span>
     </div>
   </section>
 
@@ -170,19 +166,45 @@
     </div>
   </div>
 
+  <!-- 我的（记录/收藏/下载）弹窗 -->
+  <div class="log-overlay" id="me-overlay" role="dialog" aria-modal="true">
+    <div class="log-modal">
+      <div class="log-head">
+        <h3>👤 我的</h3>
+        <button class="modal-close" id="me-close" aria-label="关闭">✕</button>
+      </div>
+      <div class="me-menu" id="me-menu">
+        <a class="me-item" id="me-logs" href="javascript:void(0)">
+          <span class="me-ico">📝</span>
+          <span class="me-main"><b>训练记录</b><i>记录每次训练的动作、组数、次数、重量</i></span>
+          <span class="me-arrow">›</span>
+        </a>
+        <a class="me-item" id="me-fav" href="javascript:void(0)">
+          <span class="me-ico">❤️</span>
+          <span class="me-main"><b>我的收藏</b><i>已收藏的动作合集，方便快速复习</i></span>
+          <span class="me-arrow">›</span>
+        </a>
+        <a class="me-item" id="me-download" href="downloads/gymguide.apk" download>
+          <span class="me-ico">📱</span>
+          <span class="me-main"><b>下载安卓 App</b><i>离线可用 · 图标直达 · 手机上体验更顺滑</i></span>
+          <span class="me-arrow">›</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
   <!-- 底部菜单栏 -->
   <nav class="tab-bar" id="tab-bar" aria-label="底部菜单">
     <button class="tab-item on" id="tab-train" aria-label="训练"><span class="tab-ico">🏋️</span><span class="tab-text">训练</span></button>
     <button class="tab-item" id="tab-cat" aria-label="分类"><span class="tab-ico">🗂️</span><span class="tab-text">分类</span></button>
-    <button class="tab-item" id="tab-log" aria-label="记录"><span class="tab-ico">📝</span><span class="tab-text">记录</span></button>
-    <button class="tab-item" id="tab-fav" aria-label="收藏"><span class="tab-ico">❤️<span class="tab-badge" id="tab-fav-count" hidden></span></span><span class="tab-text">收藏</span></button>
+    <button class="tab-item" id="tab-me" aria-label="我的"><span class="tab-ico">👤<span class="tab-badge" id="tab-me-count" hidden></span></span><span class="tab-text">我的</span></button>
   </nav>
 
   <!-- 回到顶部 -->
   <button class="back-top" id="back-top" aria-label="回到顶部">↑</button>
 
-  <script src="js/data.js?v=24"></script>
-  <script src="js/main.js?v=24"></script>
+  <script src="js/data.js?v=25"></script>
+  <script src="js/main.js?v=25"></script>
   <script>
     // PWA：注册 Service Worker 实现离线缓存与安装能力
     if ("serviceWorker" in navigator) {

@@ -155,14 +155,14 @@
 
   const navFav = $("#nav-fav");
   const favCount = $("#fav-count");
-  const tabFav = $("#tab-fav");
-  const tabFavCount = $("#tab-fav-count");
+  const tabMe = $("#tab-me");
+  const tabMeCount = $("#tab-me-count");
   function updateFavNav() {
     const n = favs.size > 99 ? "99+" : favs.size;
     favCount.hidden = favs.size === 0;
     favCount.textContent = n;
-    tabFavCount.hidden = favs.size === 0;
-    tabFavCount.textContent = n;
+    tabMeCount.hidden = favs.size === 0;
+    tabMeCount.textContent = n;
   }
   function setActiveTab(tabEl) {
     $$(".tab-item").forEach(function (t) { t.classList.remove("on"); });
@@ -177,12 +177,7 @@
   navFav.addEventListener("click", function () {
     const next = !favOnly;
     setFavOnly(next);
-    setActiveTab(next ? tabFav : $("#tab-train"));
-  });
-  tabFav.addEventListener("click", function () {
-    const next = !favOnly;
-    setFavOnly(next);
-    setActiveTab(next ? tabFav : $("#tab-train"));
+    setActiveTab(next ? tabMe : $("#tab-train"));
   });
 
   $("#main-content").addEventListener("click", function (e) {
@@ -385,10 +380,6 @@
     setActiveTab($("#tab-train"));
   }
   $("#nav-logs").addEventListener("click", openLogOverlay);
-  $("#tab-log").addEventListener("click", function () {
-    setActiveTab(this);
-    openLogOverlay();
-  });
   $("#tab-train").addEventListener("click", function () {
     setActiveTab(this);
     if (favOnly) setFavOnly(false);
@@ -397,6 +388,40 @@
   $("#log-close").addEventListener("click", closeLogOverlay);
   logOverlay.addEventListener("click", function (e) {
     if (e.target === logOverlay) closeLogOverlay();
+  });
+
+  // ---------- 我的（记录/收藏/下载）弹窗 ----------
+  const meOverlay = $("#me-overlay");
+  function openMeOverlay() {
+    meOverlay.classList.add("open");
+    lockScroll();
+  }
+  function closeMeOverlay() {
+    meOverlay.classList.remove("open");
+    unlockScroll();
+  }
+  $("#tab-me").addEventListener("click", function () {
+    setActiveTab(this);
+    openMeOverlay();
+  });
+  $("#me-close").addEventListener("click", function () {
+    closeMeOverlay();
+    setActiveTab($("#tab-train"));
+  });
+  meOverlay.addEventListener("click", function (e) {
+    if (e.target === meOverlay) {
+      closeMeOverlay();
+      setActiveTab($("#tab-train"));
+    }
+  });
+  $("#me-logs").addEventListener("click", function () {
+    closeMeOverlay();
+    openLogOverlay();
+  });
+  $("#me-fav").addEventListener("click", function () {
+    closeMeOverlay();
+    setFavOnly(true);
+    setActiveTab(tabMe);
   });
 
   // ---------- 分类快捷跳转弹窗 ----------
@@ -511,6 +536,11 @@
   }
 
   // ---------- 初始化 ----------
+  // 在原生 App（Capacitor）内隐藏"下载安卓 App"入口
+  if (typeof window.Capacitor !== "undefined" && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform()) {
+    var meDownload = $("#me-download");
+    if (meDownload) meDownload.style.display = "none";
+  }
   $("#stat-total").textContent = EXERCISES.length;
   $("#stat-cat").textContent = CATEGORIES.length;
   renderCatIntro();
