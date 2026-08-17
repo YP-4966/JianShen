@@ -120,15 +120,32 @@
       <div class="log-body">
         <div class="log-form">
           <h4>记一笔</h4>
-          <select id="log-exercise" aria-label="选择动作"><option value="">选择动作…</option></select>
-          <div class="log-form-row">
-            <label>日期<input type="date" id="log-date"></label>
-            <label>组数<input type="number" id="log-sets" min="1" max="20" placeholder="3"></label>
-            <label>次数<input type="number" id="log-reps" min="1" max="200" placeholder="12"></label>
-            <label>重量kg<input type="number" id="log-weight" min="0" step="0.5" placeholder="自重可空"></label>
+          <div class="log-field field-full">
+            <label for="log-exercise">🏋️ 选择动作</label>
+            <select id="log-exercise" aria-label="选择动作"><option value="">选择动作…</option></select>
           </div>
-          <button class="log-save" id="log-save">保存记录</button>
-          <span class="log-msg" id="log-msg"></span>
+          <div class="log-fields-row">
+            <div class="log-field">
+              <label for="log-date">📅 日期</label>
+              <input type="date" id="log-date">
+            </div>
+            <div class="log-field">
+              <label for="log-sets">🔢 组数</label>
+              <input type="number" id="log-sets" min="1" max="20" placeholder="3">
+            </div>
+            <div class="log-field">
+              <label for="log-reps">🔁 次数</label>
+              <input type="number" id="log-reps" min="1" max="200" placeholder="12">
+            </div>
+            <div class="log-field">
+              <label for="log-weight">⚖️ 重量kg</label>
+              <input type="number" id="log-weight" min="0" step="0.5" placeholder="自重可空">
+            </div>
+          </div>
+          <div class="log-actions">
+            <button class="log-save" id="log-save">保存记录</button>
+            <span class="log-msg" id="log-msg"></span>
+          </div>
         </div>
         <div class="log-stats" id="log-stats"></div>
         <div class="log-list" id="log-list"></div>
