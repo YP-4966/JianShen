@@ -164,17 +164,25 @@
     tabFavCount.hidden = favs.size === 0;
     tabFavCount.textContent = n;
   }
+  function setActiveTab(tabEl) {
+    $$(".tab-item").forEach(function (t) { t.classList.remove("on"); });
+    navFav.classList.remove("on");
+    if (tabEl) tabEl.classList.add("on");
+  }
   function setFavOnly(on) {
     favOnly = on;
     navFav.classList.toggle("on", favOnly);
-    tabFav.classList.toggle("on", favOnly);
     applyFilter();
   }
   navFav.addEventListener("click", function () {
-    setFavOnly(!favOnly);
+    const next = !favOnly;
+    setFavOnly(next);
+    setActiveTab(next ? tabFav : $("#tab-train"));
   });
   tabFav.addEventListener("click", function () {
-    setFavOnly(!favOnly);
+    const next = !favOnly;
+    setFavOnly(next);
+    setActiveTab(next ? tabFav : $("#tab-train"));
   });
 
   $("#main-content").addEventListener("click", function (e) {
@@ -374,10 +382,15 @@
   function closeLogOverlay() {
     logOverlay.classList.remove("open");
     unlockScroll();
+    setActiveTab($("#tab-train"));
   }
   $("#nav-logs").addEventListener("click", openLogOverlay);
-  $("#tab-log").addEventListener("click", openLogOverlay);
+  $("#tab-log").addEventListener("click", function () {
+    setActiveTab(this);
+    openLogOverlay();
+  });
   $("#tab-train").addEventListener("click", function () {
+    setActiveTab(this);
     if (favOnly) setFavOnly(false);
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
@@ -470,5 +483,50 @@
   window.addEventListener("scroll", function () {
     updateNav();
     updateBackTop();
+  }, { passive: true });
+
+  // ---------- 下拉刷新 ----------
+  var ptrEl = document.createElement("div");
+  ptrEl.id = "ptr-indicator";
+  ptrEl.innerHTML = '<span class="ptr-arrow">↓</span><span class="ptr-text">下拉刷新</span>';
+  document.body.appendChild(ptrEl);
+
+  var ptrStartY = 0;
+  var ptrPulling = false;
+  var ptrDist = 0;
+  var ptrThreshold = 70;
+
+  document.addEventListener("touchstart", function (e) {
+    if (window.scrollY > 5) return;
+    ptrStartY = e.touches[0].clientY;
+    ptrPulling = true;
+    ptrDist = 0;
+  }, { passive: true });
+
+  document.addEventListener("touchmove", function (e) {
+    if (!ptrPulling) return;
+    var dy = e.touches[0].clientY - ptrStartY;
+    if (dy < 0) { ptrPulling = false; return; }
+    ptrDist = dy;
+    ptrEl.style.opacity = Math.min(1, dy / ptrThreshold);
+    ptrEl.style.transform = "translateY(" + Math.min(dy * 0.45, 120) + "px)";
+    ptrEl.querySelector(".ptr-arrow").textContent = dy >= ptrThreshold ? "↻" : "↓";
+    ptrEl.querySelector(".ptr-text").textContent = dy >= ptrThreshold ? "释放刷新" : "下拉刷新";
+  }, { passive: true });
+
+  document.addEventListener("touchend", function () {
+    if (!ptrPulling) return;
+    ptrPulling = false;
+    if (ptrDist >= ptrThreshold) {
+      ptrEl.querySelector(".ptr-arrow").textContent = "↻";
+      ptrEl.querySelector(".ptr-text").textContent = "刷新中…";
+      ptrEl.style.opacity = "1";
+      ptrEl.style.transform = "translateY(54px)";
+      location.reload();
+    } else {
+      ptrEl.style.opacity = "0";
+      ptrEl.style.transform = "translateY(-60px)";
+    }
+    ptrDist = 0;
   }, { passive: true });
 })();
