@@ -247,6 +247,12 @@ img {
   max-width: var(--max-w);
   margin: 0 auto;
   padding: 0 24px;
+  position: sticky;
+  top: 64px;
+  z-index: 95;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .toolbar-inner {
@@ -438,7 +444,7 @@ img {
   max-width: var(--max-w);
   margin: 0 auto;
   padding: 56px 24px 8px;
-  scroll-margin-top: 84px;
+  scroll-margin-top: 150px;
 }
 
 .section-head {
@@ -1414,6 +1420,7 @@ body {
   }
   .section {
     padding: 16px 16px 0;
+    scroll-margin-top: 130px;
   }
   .section-head {
     margin-bottom: 12px;
