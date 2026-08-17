@@ -9,6 +9,9 @@
   function $$(sel, root) {
     return Array.from((root || document).querySelectorAll(sel));
   }
+  function levelClass(lv) {
+    return lv === "初级" ? "lv-1" : lv === "中级" ? "lv-2" : "lv-3";
+  }
 
   // ---------- 渲染分类说明条 ----------
   function renderCatIntro() {
@@ -85,6 +88,7 @@
       '<div class="info">' +
       "<h3>" + ex.name + "</h3>" +
       '<span class="en">' + ex.en + "</span>" +
+      '<div class="meta"><span class="badge equip">' + ex.equipment + '</span><span class="badge level ' + levelClass(ex.level) + '">' + ex.level + "</span></div>" +
       '<div class="tags">' + tags + "</div>" +
       '<span class="more">查看使用指南 <span class="arrow">→</span></span>' +
       "</div>";
@@ -100,6 +104,7 @@
   const modalTitle = $("#modal-title");
   const modalEn = $("#modal-en");
   const modalMedia = $("#modal-media");
+  const modalMeta = $("#modal-meta");
   const modalTarget = $("#modal-target");
   const modalSteps = $("#modal-steps");
   const modalTips = $("#modal-tips");
@@ -112,6 +117,9 @@
     modalEn.textContent = ex.en;
 
     modalMedia.innerHTML = '<img src="' + ex.gif + '" alt="' + ex.name + " 动作演示" + '">';
+
+    modalMeta.innerHTML =
+      '<span class="badge equip">' + ex.equipment + '</span><span class="badge level ' + levelClass(ex.level) + '">' + ex.level + "</span>";
 
     modalTarget.innerHTML = ex.target
       .map(function (t) {
@@ -174,6 +182,58 @@
   }
   backTop.addEventListener("click", function () {
     window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  // ---------- 搜索与筛选 ----------
+  const EQUIPMENTS = Array.from(new Set(EXERCISES.map((e) => e.equipment))).sort();
+  const eqSelect = $("#filter-equipment");
+  eqSelect.innerHTML =
+    '<option value="">全部器械</option>' +
+    EQUIPMENTS.map((e) => '<option value="' + e + '">' + e + "</option>").join("");
+
+  const searchInput = $("#search-input");
+  const levelSelect = $("#filter-level");
+  const clearBtn = $("#filter-clear");
+  const resultCount = $("#result-count");
+  const exById = {};
+  EXERCISES.forEach((e) => (exById[e.id] = e));
+
+  function matchesFilter(ex) {
+    const kw = searchInput.value.trim().toLowerCase();
+    if (kw) {
+      const hay = (ex.name + " " + ex.en + " " + ex.target.join(" ")).toLowerCase();
+      if (hay.indexOf(kw) === -1) return false;
+    }
+    if (eqSelect.value && ex.equipment !== eqSelect.value) return false;
+    if (levelSelect.value && ex.level !== levelSelect.value) return false;
+    return true;
+  }
+
+  function applyFilter() {
+    const hasFilter = !!(searchInput.value.trim() || eqSelect.value || levelSelect.value);
+    clearBtn.hidden = !hasFilter;
+    let visible = 0;
+    $$(".section").forEach(function (sec) {
+      let secVisible = 0;
+      $$(".card", sec).forEach(function (card) {
+        const show = matchesFilter(exById[card.dataset.exId]);
+        card.style.display = show ? "" : "none";
+        if (show) secVisible++;
+      });
+      sec.style.display = secVisible ? "" : "none";
+      visible += secVisible;
+    });
+    resultCount.textContent = hasFilter ? "匹配 " + visible + " 个动作" : "";
+  }
+
+  searchInput.addEventListener("input", applyFilter);
+  eqSelect.addEventListener("change", applyFilter);
+  levelSelect.addEventListener("change", applyFilter);
+  clearBtn.addEventListener("click", function () {
+    searchInput.value = "";
+    eqSelect.value = "";
+    levelSelect.value = "";
+    applyFilter();
   });
 
   // ---------- 初始化 ----------

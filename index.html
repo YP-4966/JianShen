@@ -43,6 +43,22 @@
     </div>
   </section>
 
+  <!-- 搜索与筛选 -->
+  <div class="toolbar" id="toolbar">
+    <div class="toolbar-inner">
+      <input type="search" id="search-input" placeholder="🔍 搜索动作，如：卧推、深蹲、引体…" autocomplete="off" aria-label="搜索动作">
+      <select id="filter-equipment" aria-label="按器械筛选"></select>
+      <select id="filter-level" aria-label="按难度筛选">
+        <option value="">全部难度</option>
+        <option value="初级">初级</option>
+        <option value="中级">中级</option>
+        <option value="高级">高级</option>
+      </select>
+      <button type="button" id="filter-clear" class="clear-btn" hidden>✕ 清空</button>
+      <span class="result-count" id="result-count"></span>
+    </div>
+  </div>
+
   <!-- 分类说明 -->
   <div class="cat-intro" id="cat-intro"></div>
 
@@ -69,6 +85,7 @@
       </div>
       <div class="modal-body">
         <div class="modal-media" id="modal-media"></div>
+        <div class="modal-meta" id="modal-meta"></div>
         <div class="modal-target" id="modal-target"></div>
         <div class="modal-section">
           <h4><span class="dot"></span>动作步骤</h4>

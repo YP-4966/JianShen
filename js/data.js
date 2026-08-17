@@ -72,6 +72,8 @@ const EXERCISES = [
   {
     id: "jumping-jack",
     cat: "warmup",
+    equipment: "徒手",
+    level: "初级",
     name: "开合跳",
     en: "Jumping Jack",
     gif: "media/1g5bPpA.gif",
@@ -95,6 +97,8 @@ const EXERCISES = [
   {
     id: "high-knees",
     cat: "warmup",
+    equipment: "徒手",
+    level: "初级",
     name: "高抬腿",
     en: "High Knees",
     gif: "media/ealLwvX.gif",
@@ -118,6 +122,8 @@ const EXERCISES = [
   {
     id: "inchworm",
     cat: "warmup",
+    equipment: "徒手",
+    level: "初级",
     name: "毛毛虫爬行",
     en: "Inchworm",
     gif: "media/ZgsNQ6d.gif",
@@ -141,6 +147,8 @@ const EXERCISES = [
   {
     id: "mountain-climber",
     cat: "warmup",
+    equipment: "徒手",
+    level: "初级",
     name: "登山跑",
     en: "Mountain Climber",
     gif: "media/RJgzwny.gif",
@@ -164,6 +172,8 @@ const EXERCISES = [
   {
     id: "glute-bridge-march",
     cat: "warmup",
+    equipment: "徒手",
+    level: "初级",
     name: "臀桥交替抬腿",
     en: "Glute Bridge March",
     gif: "media/GibBPPg.gif",
@@ -187,6 +197,8 @@ const EXERCISES = [
   {
     id: "chest-shoulder-stretch",
     cat: "warmup",
+    equipment: "徒手",
+    level: "初级",
     name: "胸肩前侧拉伸",
     en: "Chest & Shoulder Stretch",
     gif: "media/Uto7l43.gif",
@@ -210,6 +222,8 @@ const EXERCISES = [
   {
     id: "ankle-circles",
     cat: "warmup",
+    equipment: "徒手",
+    level: "初级",
     name: "踝关节环绕",
     en: "Ankle Circles",
     gif: "media/uL9CsKm.gif",
@@ -233,6 +247,8 @@ const EXERCISES = [
   {
     id: "wrist-circles",
     cat: "warmup",
+    equipment: "徒手",
+    level: "初级",
     name: "腕关节环绕",
     en: "Wrist Circles",
     gif: "media/2zNKRUB.gif",
@@ -256,6 +272,8 @@ const EXERCISES = [
   {
     id: "neck-side-stretch",
     cat: "warmup",
+    equipment: "徒手",
+    level: "初级",
     name: "颈侧拉伸",
     en: "Neck Side Stretch",
     gif: "media/x2chWLO.gif",
@@ -279,6 +297,8 @@ const EXERCISES = [
   {
     id: "side-bend",
     cat: "warmup",
+    equipment: "徒手",
+    level: "初级",
     name: "体侧屈",
     en: "Side Bend",
     gif: "media/Hy9D21L.gif",
@@ -302,6 +322,8 @@ const EXERCISES = [
   {
     id: "walking-lunge",
     cat: "warmup",
+    equipment: "徒手",
+    level: "初级",
     name: "弓步走",
     en: "Walking Lunge",
     gif: "media/IZVHb27.gif",
@@ -325,6 +347,8 @@ const EXERCISES = [
   {
     id: "calf-stretch",
     cat: "warmup",
+    equipment: "徒手",
+    level: "初级",
     name: "小腿拉伸",
     en: "Calf Stretch",
     gif: "media/m0tCHqc.gif",
@@ -350,6 +374,8 @@ const EXERCISES = [
   {
     id: "barbell-bench-press",
     cat: "chest",
+    equipment: "杠铃",
+    level: "中级",
     name: "杠铃卧推",
     en: "Barbell Bench Press",
     gif: "media/EIeI8Vf.gif",
@@ -374,6 +400,8 @@ const EXERCISES = [
   {
     id: "dumbbell-bench-press",
     cat: "chest",
+    equipment: "哑铃",
+    level: "初级",
     name: "哑铃卧推",
     en: "Dumbbell Bench Press",
     gif: "media/SpYC0Kp.gif",
@@ -398,6 +426,8 @@ const EXERCISES = [
   {
     id: "chest-press",
     cat: "chest",
+    equipment: "固定器械",
+    level: "初级",
     name: "坐姿推胸机",
     en: "Machine Chest Press",
     gif: "media/DOoWcnA.gif",
@@ -422,6 +452,8 @@ const EXERCISES = [
   {
     id: "pec-deck",
     cat: "chest",
+    equipment: "固定器械",
+    level: "初级",
     name: "蝴蝶机夹胸",
     en: "Pec Deck",
     gif: "media/v3xmPAR.gif",
@@ -446,6 +478,8 @@ const EXERCISES = [
   {
     id: "dumbbell-fly",
     cat: "chest",
+    equipment: "哑铃",
+    level: "中级",
     name: "哑铃飞鸟",
     en: "Dumbbell Fly",
     gif: "media/yz9nUhF.gif",
@@ -470,6 +504,8 @@ const EXERCISES = [
   {
     id: "push-up",
     cat: "chest",
+    equipment: "徒手",
+    level: "初级",
     name: "俯卧撑",
     en: "Push-Up",
     gif: "media/I4hDWkc.gif",
@@ -496,6 +532,8 @@ const EXERCISES = [
   {
     id: "barbell-military-press",
     cat: "shoulder",
+    equipment: "杠铃",
+    level: "中级",
     name: "杠铃站姿推举",
     en: "Barbell Military Press",
     gif: "media/wdRZISl.gif",
@@ -520,6 +558,8 @@ const EXERCISES = [
   {
     id: "dumbbell-shoulder-press",
     cat: "shoulder",
+    equipment: "哑铃",
+    level: "初级",
     name: "哑铃肩上推举",
     en: "Dumbbell Overhead Press",
     gif: "media/A6wtbuL.gif",
@@ -544,6 +584,8 @@ const EXERCISES = [
   {
     id: "dumbbell-lateral-raise",
     cat: "shoulder",
+    equipment: "哑铃",
+    level: "初级",
     name: "哑铃侧平举",
     en: "Dumbbell Lateral Raise",
     gif: "media/DsgkuIt.gif",
@@ -568,6 +610,8 @@ const EXERCISES = [
   {
     id: "dumbbell-reverse-fly",
     cat: "shoulder",
+    equipment: "哑铃",
+    level: "初级",
     name: "哑铃反向飞鸟",
     en: "Dumbbell Reverse Fly",
     gif: "media/EAs3xL9.gif",
@@ -594,6 +638,8 @@ const EXERCISES = [
   {
     id: "pull-up",
     cat: "back",
+    equipment: "单双杠",
+    level: "高级",
     name: "引体向上",
     en: "Pull-Up",
     gif: "media/lBDjFxJ.gif",
@@ -618,6 +664,8 @@ const EXERCISES = [
   {
     id: "lat-pulldown",
     cat: "back",
+    equipment: "固定器械",
+    level: "初级",
     name: "高位下拉",
     en: "Lat Pulldown",
     gif: "media/LEprlgG.gif",
@@ -642,6 +690,8 @@ const EXERCISES = [
   {
     id: "barbell-row",
     cat: "back",
+    equipment: "杠铃",
+    level: "中级",
     name: "杠铃划船",
     en: "Barbell Bent-Over Row",
     gif: "media/eZyBC3j.gif",
@@ -666,6 +716,8 @@ const EXERCISES = [
   {
     id: "seated-row",
     cat: "back",
+    equipment: "固定器械",
+    level: "初级",
     name: "坐姿划船",
     en: "Seated Cable Row",
     gif: "media/fUBheHs.gif",
@@ -690,6 +742,8 @@ const EXERCISES = [
   {
     id: "dumbbell-row",
     cat: "back",
+    equipment: "哑铃",
+    level: "初级",
     name: "哑铃俯身划船",
     en: "Dumbbell Bent-Over Row",
     gif: "media/BJ0Hz5L.gif",
@@ -714,6 +768,8 @@ const EXERCISES = [
   {
     id: "straight-arm-pulldown",
     cat: "back",
+    equipment: "绳索",
+    level: "中级",
     name: "直臂下拉",
     en: "Straight-Arm Pulldown",
     gif: "media/x69MAlq.gif",
@@ -740,6 +796,8 @@ const EXERCISES = [
   {
     id: "barbell-glute-bridge",
     cat: "glute",
+    equipment: "杠铃",
+    level: "初级",
     name: "杠铃臀桥",
     en: "Barbell Glute Bridge",
     gif: "media/qKBpF7I.gif",
@@ -764,6 +822,8 @@ const EXERCISES = [
   {
     id: "deadlift",
     cat: "glute",
+    equipment: "杠铃",
+    level: "高级",
     name: "硬拉",
     en: "Barbell Deadlift",
     gif: "media/ila4NZS.gif",
@@ -788,6 +848,8 @@ const EXERCISES = [
   {
     id: "romanian-deadlift",
     cat: "glute",
+    equipment: "杠铃",
+    level: "中级",
     name: "罗马尼亚硬拉",
     en: "Romanian Deadlift",
     gif: "media/wQ2c4XD.gif",
@@ -812,6 +874,8 @@ const EXERCISES = [
   {
     id: "kettlebell-swing",
     cat: "glute",
+    equipment: "壶铃",
+    level: "中级",
     name: "壶铃摆动",
     en: "Kettlebell Swing",
     gif: "media/UHJlbu3.gif",
@@ -838,6 +902,8 @@ const EXERCISES = [
   {
     id: "barbell-squat",
     cat: "leg",
+    equipment: "杠铃",
+    level: "中级",
     name: "杠铃深蹲",
     en: "Barbell Back Squat",
     gif: "media/qXTaZnJ.gif",
@@ -862,6 +928,8 @@ const EXERCISES = [
   {
     id: "leg-press",
     cat: "leg",
+    equipment: "固定器械",
+    level: "初级",
     name: "腿举机",
     en: "Leg Press",
     gif: "media/10Z2DXU.gif",
@@ -886,6 +954,8 @@ const EXERCISES = [
   {
     id: "dumbbell-lunge",
     cat: "leg",
+    equipment: "哑铃",
+    level: "初级",
     name: "哑铃箭步蹲",
     en: "Dumbbell Lunge",
     gif: "media/ecl28tP.gif",
@@ -910,6 +980,8 @@ const EXERCISES = [
   {
     id: "leg-curl",
     cat: "leg",
+    equipment: "固定器械",
+    level: "初级",
     name: "腿弯举机",
     en: "Lying Leg Curl",
     gif: "media/17lJ1kr.gif",
@@ -934,6 +1006,8 @@ const EXERCISES = [
   {
     id: "leg-extension",
     cat: "leg",
+    equipment: "固定器械",
+    level: "初级",
     name: "腿屈伸机",
     en: "Leg Extension",
     gif: "media/my33uHU.gif",
@@ -958,6 +1032,8 @@ const EXERCISES = [
   {
     id: "standing-calf-raise",
     cat: "leg",
+    equipment: "杠铃",
+    level: "初级",
     name: "站姿提踵",
     en: "Standing Calf Raise",
     gif: "media/8ozhUIZ.gif",
@@ -983,6 +1059,8 @@ const EXERCISES = [
   {
     id: "barbell-curl",
     cat: "arm",
+    equipment: "杠铃",
+    level: "初级",
     name: "杠铃弯举",
     en: "Barbell Curl",
     gif: "media/25GPyDY.gif",
@@ -1007,6 +1085,8 @@ const EXERCISES = [
   {
     id: "dumbbell-curl",
     cat: "arm",
+    equipment: "哑铃",
+    level: "初级",
     name: "哑铃弯举",
     en: "Dumbbell Curl",
     gif: "media/NbVPDMW.gif",
@@ -1031,6 +1111,8 @@ const EXERCISES = [
   {
     id: "pushdown",
     cat: "arm",
+    equipment: "绳索",
+    level: "初级",
     name: "绳索下压",
     en: "Cable Triceps Pushdown",
     gif: "media/dU605di.gif",
@@ -1057,6 +1139,8 @@ const EXERCISES = [
   {
     id: "crunch",
     cat: "core",
+    equipment: "徒手",
+    level: "初级",
     name: "卷腹",
     en: "Crunch",
     gif: "media/TFqbd8t.gif",
@@ -1081,6 +1165,8 @@ const EXERCISES = [
   {
     id: "plank",
     cat: "core",
+    equipment: "徒手",
+    level: "初级",
     name: "平板支撑",
     en: "Forearm Plank",
     gif: "media/VBAWRPG.gif",
@@ -1107,6 +1193,8 @@ const EXERCISES = [
   {
     id: "treadmill",
     cat: "cardio",
+    equipment: "有氧器械",
+    level: "初级",
     name: "跑步机",
     en: "Treadmill",
     gif: "media/rjiM4L3.gif",
@@ -1131,6 +1219,8 @@ const EXERCISES = [
   {
     id: "elliptical",
     cat: "cardio",
+    equipment: "有氧器械",
+    level: "初级",
     name: "椭圆机",
     en: "Elliptical Trainer",
     gif: "media/rjtuP6X.gif",
@@ -1155,6 +1245,8 @@ const EXERCISES = [
   {
     id: "stationary-bike",
     cat: "cardio",
+    equipment: "有氧器械",
+    level: "初级",
     name: "动感单车",
     en: "Stationary Bike",
     gif: "media/H1PESYI.gif",
@@ -1179,6 +1271,8 @@ const EXERCISES = [
   {
     id: "stepmill",
     cat: "cardio",
+    equipment: "有氧器械",
+    level: "初级",
     name: "登山机",
     en: "Stair Climber",
     gif: "media/j9Q5crt.gif",
@@ -1205,6 +1299,8 @@ const EXERCISES = [
   {
     id: "chest-dip",
     cat: "chest",
+    equipment: "单双杠",
+    level: "高级",
     name: "双杠臂屈伸",
     en: "Chest Dip",
     gif: "media/XgWyAiA.gif",
@@ -1229,6 +1325,8 @@ const EXERCISES = [
   {
     id: "cable-fly",
     cat: "chest",
+    equipment: "绳索",
+    level: "中级",
     name: "绳索夹胸",
     en: "Cable Fly",
     gif: "media/Pr9Rhf4.gif",
@@ -1255,6 +1353,8 @@ const EXERCISES = [
   {
     id: "machine-shoulder-press",
     cat: "shoulder",
+    equipment: "固定器械",
+    level: "初级",
     name: "坐姿器械推举",
     en: "Machine Shoulder Press",
     gif: "media/67n3r98.gif",
@@ -1279,6 +1379,8 @@ const EXERCISES = [
   {
     id: "dumbbell-front-raise",
     cat: "shoulder",
+    equipment: "哑铃",
+    level: "初级",
     name: "哑铃前平举",
     en: "Dumbbell Front Raise",
     gif: "media/3eGE2JC.gif",
@@ -1304,6 +1406,8 @@ const EXERCISES = [
   {
     id: "reverse-lat-pulldown",
     cat: "back",
+    equipment: "固定器械",
+    level: "中级",
     name: "反握高位下拉",
     en: "Reverse-Grip Lat Pulldown",
     gif: "media/ecpY0rH.gif",
@@ -1328,6 +1432,8 @@ const EXERCISES = [
   {
     id: "machine-seated-row",
     cat: "back",
+    equipment: "固定器械",
+    level: "初级",
     name: "器械坐姿划船",
     en: "Machine Seated Row",
     gif: "media/7I6LNUG.gif",
@@ -1354,6 +1460,8 @@ const EXERCISES = [
   {
     id: "sumo-deadlift",
     cat: "glute",
+    equipment: "杠铃",
+    level: "中级",
     name: "相扑硬拉",
     en: "Sumo Deadlift",
     gif: "media/KgI0tqW.gif",
@@ -1378,6 +1486,8 @@ const EXERCISES = [
   {
     id: "cable-kickback",
     cat: "glute",
+    equipment: "绳索",
+    level: "初级",
     name: "绳索后踢腿",
     en: "Cable Kickback",
     gif: "media/Kpajagk.gif",
@@ -1404,6 +1514,8 @@ const EXERCISES = [
   {
     id: "hack-squat",
     cat: "leg",
+    equipment: "固定器械",
+    level: "中级",
     name: "哈克深蹲",
     en: "Hack Squat",
     gif: "media/Qa55kX1.gif",
@@ -1428,6 +1540,8 @@ const EXERCISES = [
   {
     id: "split-squat",
     cat: "leg",
+    equipment: "哑铃",
+    level: "中级",
     name: "哑铃分腿蹲",
     en: "Dumbbell Split Squat",
     gif: "media/qx4fgX7.gif",
@@ -1453,6 +1567,8 @@ const EXERCISES = [
   {
     id: "hammer-curl",
     cat: "arm",
+    equipment: "哑铃",
+    level: "初级",
     name: "哑铃锤式弯举",
     en: "Hammer Curl",
     gif: "media/slDvUAU.gif",
@@ -1476,6 +1592,8 @@ const EXERCISES = [
   {
     id: "ez-curl",
     cat: "arm",
+    equipment: "杠铃",
+    level: "初级",
     name: "EZ杠弯举",
     en: "EZ-Bar Curl",
     gif: "media/6TG6x2w.gif",
@@ -1499,6 +1617,8 @@ const EXERCISES = [
   {
     id: "skull-crusher",
     cat: "arm",
+    equipment: "杠铃",
+    level: "中级",
     name: "仰卧臂屈伸",
     en: "Skull Crusher",
     gif: "media/h8LFzo9.gif",
@@ -1524,6 +1644,8 @@ const EXERCISES = [
   {
     id: "russian-twist",
     cat: "core",
+    equipment: "徒手",
+    level: "初级",
     name: "俄罗斯转体",
     en: "Russian Twist",
     gif: "media/XVDdcoj.gif",
@@ -1547,6 +1669,8 @@ const EXERCISES = [
   {
     id: "hanging-leg-raise",
     cat: "core",
+    equipment: "单双杠",
+    level: "高级",
     name: "悬垂举腿",
     en: "Hanging Leg Raise",
     gif: "media/I3tsCnC.gif",
@@ -1570,6 +1694,8 @@ const EXERCISES = [
   {
     id: "side-plank",
     cat: "core",
+    equipment: "徒手",
+    level: "初级",
     name: "侧平板支撑",
     en: "Side Plank",
     gif: "media/VO2qeJg.gif",
@@ -1595,6 +1721,8 @@ const EXERCISES = [
   {
     id: "jump-rope",
     cat: "cardio",
+    equipment: "跳绳",
+    level: "初级",
     name: "跳绳",
     en: "Jump Rope",
     gif: "media/e1e76I2.gif",
@@ -1618,6 +1746,8 @@ const EXERCISES = [
   {
     id: "burpee",
     cat: "cardio",
+    equipment: "徒手",
+    level: "中级",
     name: "波比跳",
     en: "Burpee",
     gif: "media/dK9394r.gif",
