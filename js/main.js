@@ -15,13 +15,15 @@
     const el = $("#cat-intro");
     el.innerHTML = CATEGORIES.map(
       (c) =>
-        '<div class="item"><div class="icon">' +
+        '<a class="item" href="#cat-' +
+        c.id +
+        '"><div class="icon">' +
         c.icon +
         '</div><h3>' +
         c.name +
         '</h3><p>' +
         c.desc +
-        "</p></div>"
+        "</p></a>"
     ).join("");
   }
 
