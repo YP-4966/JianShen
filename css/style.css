@@ -1418,9 +1418,15 @@ body {
     flex: 1;
     min-width: 0;
   }
+  .site-header {
+    display: none;
+  }
+  .toolbar {
+    top: 0;
+  }
   .section {
     padding: 16px 16px 0;
-    scroll-margin-top: 130px;
+    scroll-margin-top: 70px;
   }
   .section-head {
     margin-bottom: 12px;
