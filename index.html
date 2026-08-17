@@ -28,6 +28,10 @@
         <a href="#cat-core">核心</a>
         <a href="#cat-cardio">有氧</a>
       </nav>
+      <div class="header-actions">
+        <button class="nav-action" id="nav-fav" aria-label="我的收藏" title="我的收藏"><span>❤️</span><span class="nav-text">收藏</span></button>
+        <button class="nav-action" id="nav-logs" aria-label="训练记录" title="训练记录"><span>📝</span><span class="nav-text">记录</span></button>
+      </div>
     </div>
   </header>
 
@@ -81,7 +85,10 @@
           <h3 id="modal-title"></h3>
           <div class="en" id="modal-en"></div>
         </div>
-        <button class="modal-close" id="modal-close" aria-label="关闭">✕</button>
+        <div class="modal-head-actions">
+          <button class="modal-fav" id="modal-fav" aria-label="收藏">🤍</button>
+          <button class="modal-close" id="modal-close" aria-label="关闭">✕</button>
+        </div>
       </div>
       <div class="modal-body">
         <div class="modal-media" id="modal-media"></div>
@@ -99,6 +106,32 @@
           <h4><span class="dot"></span>常见错误</h4>
           <ul id="modal-mistakes"></ul>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 训练记录弹窗 -->
+  <div class="log-overlay" id="log-overlay" role="dialog" aria-modal="true">
+    <div class="log-modal">
+      <div class="log-head">
+        <h3>📝 训练记录</h3>
+        <button class="modal-close" id="log-close" aria-label="关闭">✕</button>
+      </div>
+      <div class="log-body">
+        <div class="log-form">
+          <h4>记一笔</h4>
+          <select id="log-exercise" aria-label="选择动作"><option value="">选择动作…</option></select>
+          <div class="log-form-row">
+            <label>日期<input type="date" id="log-date"></label>
+            <label>组数<input type="number" id="log-sets" min="1" max="20" placeholder="3"></label>
+            <label>次数<input type="number" id="log-reps" min="1" max="200" placeholder="12"></label>
+            <label>重量kg<input type="number" id="log-weight" min="0" step="0.5" placeholder="自重可空"></label>
+          </div>
+          <button class="log-save" id="log-save">保存记录</button>
+          <span class="log-msg" id="log-msg"></span>
+        </div>
+        <div class="log-stats" id="log-stats"></div>
+        <div class="log-list" id="log-list"></div>
       </div>
     </div>
   </div>
