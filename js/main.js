@@ -285,8 +285,6 @@
 
   const searchInput = $("#search-input");
   const levelSelect = $("#filter-level");
-  const clearBtn = $("#filter-clear");
-  const resultCount = $("#result-count");
   const exById = {};
   EXERCISES.forEach((e) => (exById[e.id] = e));
 
@@ -303,9 +301,6 @@
   }
 
   function applyFilter() {
-    const hasFilter = !!(searchInput.value.trim() || eqSelect.value || levelSelect.value || favOnly);
-    clearBtn.hidden = !hasFilter;
-    let visible = 0;
     $$(".section").forEach(function (sec) {
       let secVisible = 0;
       $$(".card", sec).forEach(function (card) {
@@ -314,21 +309,12 @@
         if (show) secVisible++;
       });
       sec.style.display = secVisible ? "" : "none";
-      visible += secVisible;
     });
-    if (favOnly) resultCount.textContent = "收藏中匹配 " + visible + " 个动作";
-    else resultCount.textContent = hasFilter ? "匹配 " + visible + " 个动作" : "";
   }
 
   searchInput.addEventListener("input", applyFilter);
   eqSelect.addEventListener("change", applyFilter);
   levelSelect.addEventListener("change", applyFilter);
-  clearBtn.addEventListener("click", function () {
-    searchInput.value = "";
-    eqSelect.value = "";
-    levelSelect.value = "";
-    applyFilter();
-  });
 
   // ---------- 训练记录 ----------
   const LOG_KEY = "jianshen-logs";

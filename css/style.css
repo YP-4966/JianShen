@@ -313,35 +313,6 @@ img {
   background-position: right 13px center;
 }
 
-.toolbar .clear-btn {
-  height: 42px;
-  padding: 0 16px;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  background: #fff;
-  color: var(--text-muted);
-  font-size: 13.5px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.toolbar .clear-btn:hover {
-  border-color: #fecaca;
-  background: #fef2f2;
-  color: #dc2626;
-}
-
-.toolbar .result-count {
-  font-size: 12.5px;
-  color: var(--primary-deep);
-  background: var(--primary-soft);
-  padding: 5px 13px;
-  border-radius: 999px;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
 /* ========== 器械 / 难度徽章 ========== */
 .badge {
   display: inline-flex;
