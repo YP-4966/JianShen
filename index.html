@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="健身房器械使用指南：有氧器械、固定器械、自由重量、自重训练的动作要领、注意事项与常见错误">
   <title>健身房器械使用指南</title>
-  <link rel="stylesheet" href="css/style.css?v=19">
+  <link rel="stylesheet" href="css/style.css?v=20">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏋️</text></svg>">
   <link rel="manifest" href="manifest.webmanifest">
   <meta name="theme-color" content="#10b981">
@@ -43,16 +43,14 @@
 
   <!-- 搜索与筛选（吸顶固定） -->
   <div class="toolbar" id="toolbar">
-    <div class="toolbar-inner">
-      <input type="search" id="search-input" placeholder="🔍 搜索动作，如：卧推、深蹲、引体…" autocomplete="off" aria-label="搜索动作">
-      <select id="filter-equipment" aria-label="按器械筛选"></select>
-      <select id="filter-level" aria-label="按难度筛选">
-        <option value="">全部难度</option>
-        <option value="初级">初级</option>
-        <option value="中级">中级</option>
-        <option value="高级">高级</option>
-      </select>
-    </div>
+    <input type="search" id="search-input" placeholder="🔍 搜索动作，如：卧推、深蹲、引体…" autocomplete="off" aria-label="搜索动作">
+    <select id="filter-equipment" aria-label="按器械筛选"></select>
+    <select id="filter-level" aria-label="按难度筛选">
+      <option value="">全部难度</option>
+      <option value="初级">初级</option>
+      <option value="中级">中级</option>
+      <option value="高级">高级</option>
+    </select>
   </div>
 
   <!-- 首屏 -->
@@ -167,8 +165,8 @@
   <!-- 回到顶部 -->
   <button class="back-top" id="back-top" aria-label="回到顶部">↑</button>
 
-  <script src="js/data.js?v=19"></script>
-  <script src="js/main.js?v=19"></script>
+  <script src="js/data.js?v=20"></script>
+  <script src="js/main.js?v=20"></script>
   <script>
     // PWA：注册 Service Worker 实现离线缓存与安装能力
     if ("serviceWorker" in navigator) {
