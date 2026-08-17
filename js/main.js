@@ -144,9 +144,10 @@
   }
 
   const navFav = $("#nav-fav");
-  const navFavText = navFav.querySelector(".nav-text");
+  const favCount = $("#fav-count");
   function updateFavNav() {
-    navFavText.textContent = "收藏" + (favs.size ? " (" + favs.size + ")" : "");
+    favCount.hidden = favs.size === 0;
+    favCount.textContent = favs.size > 99 ? "99+" : favs.size;
   }
   navFav.addEventListener("click", function () {
     favOnly = !favOnly;
