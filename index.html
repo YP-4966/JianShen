@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="健身房器械使用指南：有氧器械、固定器械、自由重量、自重训练的动作要领、注意事项与常见错误">
   <title>健身房器械使用指南</title>
-  <link rel="stylesheet" href="css/style.css?v=16">
+  <link rel="stylesheet" href="css/style.css?v=17">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏋️</text></svg>">
   <link rel="manifest" href="manifest.webmanifest">
   <meta name="theme-color" content="#10b981">
@@ -41,19 +41,7 @@
     </div>
   </header>
 
-  <!-- 首屏 -->
-  <section class="hero" id="top">
-    <span class="hero-badge">新手友好 · 图文并茂 · 动作演示</span>
-    <h1>科学训练，<span class="accent">从认识器械开始</span></h1>
-    <p>覆盖训练前热身 + 全身 9 个训练部位、最常见的健身动作，每项都配有动图演示、详细步骤、注意事项和常见错误，帮你按部位科学规划训练。</p>
-    <div class="hero-stats">
-      <div class="stat"><b id="stat-total">65</b><span>经典动作</span></div>
-      <div class="stat"><b id="stat-cat">9</b><span>训练部位</span></div>
-      <div class="stat"><b>100%</b><span>动图演示</span></div>
-    </div>
-  </section>
-
-  <!-- 搜索与筛选 -->
+  <!-- 搜索与筛选（吸顶固定） -->
   <div class="toolbar" id="toolbar">
     <div class="toolbar-inner">
       <input type="search" id="search-input" placeholder="🔍 搜索动作，如：卧推、深蹲、引体…" autocomplete="off" aria-label="搜索动作">
@@ -68,6 +56,18 @@
       <span class="result-count" id="result-count"></span>
     </div>
   </div>
+
+  <!-- 首屏 -->
+  <section class="hero" id="top">
+    <span class="hero-badge">新手友好 · 图文并茂 · 动作演示</span>
+    <h1>科学训练，<span class="accent">从认识器械开始</span></h1>
+    <p>覆盖训练前热身 + 全身 9 个训练部位、最常见的健身动作，每项都配有动图演示、详细步骤、注意事项和常见错误，帮你按部位科学规划训练。</p>
+    <div class="hero-stats">
+      <div class="stat"><b id="stat-total">65</b><span>经典动作</span></div>
+      <div class="stat"><b id="stat-cat">9</b><span>训练部位</span></div>
+      <div class="stat"><b>100%</b><span>动图演示</span></div>
+    </div>
+  </section>
 
   <!-- 分类说明 -->
   <div class="cat-intro" id="cat-intro"></div>
@@ -169,8 +169,8 @@
   <!-- 回到顶部 -->
   <button class="back-top" id="back-top" aria-label="回到顶部">↑</button>
 
-  <script src="js/data.js?v=16"></script>
-  <script src="js/main.js?v=16"></script>
+  <script src="js/data.js?v=17"></script>
+  <script src="js/main.js?v=17"></script>
   <script>
     // PWA：注册 Service Worker 实现离线缓存与安装能力
     if ("serviceWorker" in navigator) {
