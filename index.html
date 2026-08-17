@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="健身房器械使用指南：有氧器械、固定器械、自由重量、自重训练的动作要领、注意事项与常见错误">
+  <title>健身房器械使用指南</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏋️</text></svg>">
+</head>
+<body>
+
+  <!-- 顶部导航 -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo" href="#top">
+        <span class="logo-icon">🏋️</span>
+        <span>健身房器械使用指南</span>
+      </a>
+      <nav class="header-nav">
+        <a href="#cat-cardio">有氧器械</a>
+        <a href="#cat-machine">固定器械</a>
+        <a href="#cat-freeweight">自由重量</a>
+        <a href="#cat-bodyweight">自重训练</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 首屏 -->
+  <section class="hero" id="top">
+    <span class="hero-badge">新手友好 · 图文并茂 · 动作演示</span>
+    <h1>科学训练，<span class="accent">从认识器械开始</span></h1>
+    <p>涵盖健身房最常见的 4 大类器械与动作，每项都配有动图演示、详细步骤、注意事项和常见错误，帮你安全高效地开始每一次训练。</p>
+    <div class="hero-stats">
+      <div class="stat"><b>25</b><span>经典动作</span></div>
+      <div class="stat"><b>4</b><span>大类器械</span></div>
+      <div class="stat"><b>100%</b><span>动图演示</span></div>
+    </div>
+  </section>
+
+  <!-- 分类说明 -->
+  <div class="cat-intro" id="cat-intro"></div>
+
+  <!-- 主体内容 -->
+  <main id="main-content"></main>
+
+  <!-- 页脚 -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>动作演示动图来自 <a href="https://exercisedb.dev/" target="_blank" rel="noopener">ExerciseDB</a> 开源数据集 · 内容仅供学习参考</p>
+      <p style="margin-top:4px;">训练前请充分热身，如有伤病请咨询专业人士</p>
+    </div>
+  </footer>
+
+  <!-- 详情弹窗 -->
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal">
+      <div class="modal-head">
+        <div>
+          <h3 id="modal-title"></h3>
+          <div class="en" id="modal-en"></div>
+        </div>
+        <button class="modal-close" id="modal-close" aria-label="关闭">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-media" id="modal-media"></div>
+        <div class="modal-target" id="modal-target"></div>
+        <div class="modal-section">
+          <h4><span class="dot"></span>动作步骤</h4>
+          <ol id="modal-steps"></ol>
+        </div>
+        <div class="modal-section">
+          <h4><span class="dot"></span>注意事项</h4>
+          <ul id="modal-tips"></ul>
+        </div>
+        <div class="modal-section mistake">
+          <h4><span class="dot"></span>常见错误</h4>
+          <ul id="modal-mistakes"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 回到顶部 -->
+  <button class="back-top" id="back-top" aria-label="回到顶部">↑</button>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
