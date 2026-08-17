@@ -53,6 +53,11 @@
         "</span>";
       section.appendChild(head);
 
+      const advice = document.createElement("p");
+      advice.className = "advice";
+      advice.textContent = "💡 训练建议：" + cat.advice;
+      section.appendChild(advice);
+
       const grid = document.createElement("div");
       grid.className = "grid";
       items.forEach((ex) => grid.appendChild(buildCard(ex)));
@@ -170,6 +175,8 @@
   });
 
   // ---------- 初始化 ----------
+  $("#stat-total").textContent = EXERCISES.length;
+  $("#stat-cat").textContent = CATEGORIES.length;
   renderCatIntro();
   renderCategories();
   updateNav();
