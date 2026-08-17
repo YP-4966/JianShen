@@ -1292,7 +1292,7 @@ body {
   }
   .card .media {
     aspect-ratio: auto;
-    height: 128px;
+    height: 104px;
   }
   .card .info {
     padding: 10px 12px;
@@ -1352,24 +1352,26 @@ body {
     padding: 20px 20px 0;
   }
   .hero {
-    padding: 24px 16px 18px;
+    padding: 16px 16px 12px;
   }
   .hero-badge {
     display: none;
   }
   .hero h1 {
-    font-size: 22px;
+    font-size: 20px;
   }
   .hero p {
-    font-size: 13.5px;
-    margin-top: 10px;
+    display: none;
   }
   .hero-stats {
-    gap: 18px;
-    margin-top: 16px;
+    gap: 16px;
+    margin-top: 8px;
   }
   .hero-stats .stat b {
-    font-size: 20px;
+    font-size: 16px;
+  }
+  .hero-stats .stat span {
+    font-size: 11px;
   }
   .cat-intro {
     display: flex;
@@ -1382,42 +1384,44 @@ body {
     display: none;
   }
   .cat-intro .item {
-    flex: 0 0 92px;
-    padding: 12px 8px;
+    flex: 0 0 88px;
+    padding: 8px 6px;
     text-align: center;
   }
   .cat-intro .item p {
     display: none;
   }
   .cat-intro .item h3 {
-    font-size: 13px;
-    margin-top: 6px;
+    font-size: 12px;
+    margin-top: 4px;
   }
   .toolbar {
     padding: 0 16px;
   }
   .toolbar-inner {
-    gap: 8px;
-    padding: 10px;
+    gap: 6px;
+    padding: 8px;
     border-radius: 14px;
   }
   .toolbar input[type="search"] {
     min-width: 0;
-    flex-basis: 100%;
+    flex: 1.6;
   }
   .toolbar select {
     flex: 1;
     min-width: 0;
   }
-  .hero p {
-    font-size: 14px;
-  }
-  .hero-stats {
-    gap: 24px;
-    margin-top: 24px;
-  }
   .section {
-    padding: 36px 16px 0;
+    padding: 16px 16px 0;
+  }
+  .section-head {
+    margin-bottom: 12px;
+  }
+  .section-head h2 {
+    font-size: 18px;
+  }
+  .section .advice {
+    display: none;
   }
   .header-inner {
     padding: 0 16px;
