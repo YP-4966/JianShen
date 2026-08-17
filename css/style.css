@@ -936,13 +936,13 @@ img {
 .log-form select:hover,
 .log-form input:hover {
   border-color: #a7f3d0;
-  background: #fff;
+  background-color: #fff;
 }
 
 .log-form select:focus,
 .log-form input:focus {
   border-color: var(--primary);
-  background: #fff;
+  background-color: #fff;
   box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.12);
 }
 
