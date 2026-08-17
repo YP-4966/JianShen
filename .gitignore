@@ -1,0 +1,4 @@
+# Capacitor app 工程（独立构建，不入库）
+app/
+node_modules/
+.trae-html-share-packages/
