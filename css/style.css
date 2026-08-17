@@ -1151,6 +1151,79 @@ img {
   border-color: #fecaca;
 }
 
+/* ========== 底部菜单栏 ========== */
+body {
+  padding-bottom: 62px;
+}
+
+.tab-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 150;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 6px 16px calc(6px + env(safe-area-inset-bottom));
+  box-shadow: 0 -4px 16px rgba(16, 24, 40, 0.05);
+}
+
+.tab-item {
+  flex: 0 1 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 12px;
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.tab-item .tab-ico {
+  font-size: 20px;
+  line-height: 1.2;
+  position: relative;
+}
+
+.tab-item:hover {
+  color: var(--primary-deep);
+}
+
+.tab-item.on {
+  color: var(--primary-deep);
+  background: var(--primary-soft);
+}
+
+.tab-badge {
+  position: absolute;
+  top: -7px;
+  right: -11px;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #fb7185, #e11d48);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  box-shadow: 0 1px 4px rgba(225, 29, 72, 0.35);
+}
+
 /* ========== 页脚 ========== */
 .site-footer {
   margin-top: 64px;
@@ -1175,7 +1248,7 @@ img {
 .back-top {
   position: fixed;
   right: 24px;
-  bottom: 24px;
+  bottom: 84px;
   width: 44px;
   height: 44px;
   border-radius: 50%;

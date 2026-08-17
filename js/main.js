@@ -155,14 +155,26 @@
 
   const navFav = $("#nav-fav");
   const favCount = $("#fav-count");
+  const tabFav = $("#tab-fav");
+  const tabFavCount = $("#tab-fav-count");
   function updateFavNav() {
+    const n = favs.size > 99 ? "99+" : favs.size;
     favCount.hidden = favs.size === 0;
-    favCount.textContent = favs.size > 99 ? "99+" : favs.size;
+    favCount.textContent = n;
+    tabFavCount.hidden = favs.size === 0;
+    tabFavCount.textContent = n;
+  }
+  function setFavOnly(on) {
+    favOnly = on;
+    navFav.classList.toggle("on", favOnly);
+    tabFav.classList.toggle("on", favOnly);
+    applyFilter();
   }
   navFav.addEventListener("click", function () {
-    favOnly = !favOnly;
-    navFav.classList.toggle("on", favOnly);
-    applyFilter();
+    setFavOnly(!favOnly);
+  });
+  tabFav.addEventListener("click", function () {
+    setFavOnly(!favOnly);
   });
 
   $("#main-content").addEventListener("click", function (e) {
@@ -378,6 +390,11 @@
     unlockScroll();
   }
   $("#nav-logs").addEventListener("click", openLogOverlay);
+  $("#tab-log").addEventListener("click", openLogOverlay);
+  $("#tab-train").addEventListener("click", function () {
+    if (favOnly) setFavOnly(false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
   $("#log-close").addEventListener("click", closeLogOverlay);
   logOverlay.addEventListener("click", function (e) {
     if (e.target === logOverlay) closeLogOverlay();
