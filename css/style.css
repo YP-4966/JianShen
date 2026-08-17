@@ -1403,26 +1403,30 @@ body {
     margin-top: 4px;
   }
   .toolbar {
-    padding: 8px 12px;
+    padding: 4px 12px;
     box-shadow: 0 2px 10px rgba(16, 24, 40, 0.05);
   }
   .toolbar-inner {
     gap: 6px;
-    padding: 8px;
-    border-radius: 14px;
+    padding: 6px;
+    border-radius: 12px;
     box-shadow: 0 2px 10px rgba(16, 24, 40, 0.06);
   }
   .toolbar input[type="search"],
   .toolbar select {
+    height: 38px;
     border-radius: 10px;
+    font-size: 13.5px;
   }
   .toolbar input[type="search"] {
     min-width: 0;
     flex: 1.6;
+    padding-left: 34px;
   }
   .toolbar select {
     flex: 1;
     min-width: 0;
+    padding-right: 28px;
   }
   .site-header {
     display: none;
@@ -1432,7 +1436,7 @@ body {
   }
   .section {
     padding: 16px 16px 0;
-    scroll-margin-top: 82px;
+    scroll-margin-top: 64px;
   }
   .section-head {
     margin-bottom: 12px;
