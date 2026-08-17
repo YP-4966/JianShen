@@ -512,12 +512,12 @@ img {
 .card .media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s;
+  object-fit: contain;
+  transition: filter 0.3s;
 }
 
 .card:hover .media img {
-  transform: scale(1.05);
+  filter: brightness(1.07);
 }
 
 .card .media .play-badge {
@@ -1292,7 +1292,7 @@ body {
   }
   .card .media {
     aspect-ratio: auto;
-    height: 104px;
+    height: 120px;
   }
   .card .info {
     padding: 10px 12px;
@@ -1332,6 +1332,7 @@ body {
   }
   .card:hover .media img {
     transform: none;
+    filter: none;
   }
   .card:hover {
     transform: none;
