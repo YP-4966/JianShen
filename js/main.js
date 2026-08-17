@@ -399,6 +399,45 @@
     if (e.target === logOverlay) closeLogOverlay();
   });
 
+  // ---------- 分类快捷跳转弹窗 ----------
+  const catOverlay = $("#cat-overlay");
+  const catGrid = $("#cat-grid");
+  catGrid.innerHTML = CATEGORIES.map(function (c) {
+    const count = EXERCISES.filter(function (ex) { return ex.cat === c.id; }).length;
+    return '<a class="cat-chip" href="#cat-' + c.id + '" data-cat="' + c.id + '">' +
+      '<span class="cat-chip-ico">' + c.icon + "</span>" +
+      '<span class="cat-chip-name">' + c.name + "</span>" +
+      '<span class="cat-chip-n">' + count + " 个动作</span></a>";
+  }).join("");
+  function openCatOverlay() {
+    catOverlay.classList.add("open");
+    lockScroll();
+  }
+  function closeCatOverlay() {
+    catOverlay.classList.remove("open");
+    unlockScroll();
+  }
+  $("#tab-cat").addEventListener("click", function () {
+    setActiveTab(this);
+    openCatOverlay();
+  });
+  $("#cat-close").addEventListener("click", function () {
+    closeCatOverlay();
+    setActiveTab($("#tab-train"));
+  });
+  catOverlay.addEventListener("click", function (e) {
+    if (e.target === catOverlay) {
+      closeCatOverlay();
+      setActiveTab($("#tab-train"));
+    }
+  });
+  catGrid.addEventListener("click", function (e) {
+    const chip = e.target.closest(".cat-chip");
+    if (!chip) return;
+    closeCatOverlay();
+    setActiveTab($("#tab-train"));
+  });
+
   logSave.addEventListener("click", function () {
     const exId = logExercise.value;
     const sets = parseInt(logSets.value, 10);

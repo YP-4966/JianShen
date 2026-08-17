@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="健身房器械使用指南：有氧器械、固定器械、自由重量、自重训练的动作要领、注意事项与常见错误">
   <title>健身房器械使用指南</title>
-  <link rel="stylesheet" href="css/style.css?v=23">
+  <link rel="stylesheet" href="css/style.css?v=24">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏋️</text></svg>">
   <link rel="manifest" href="manifest.webmanifest">
   <meta name="theme-color" content="#10b981">
@@ -159,9 +159,21 @@
     </div>
   </div>
 
+  <!-- 分类快捷跳转弹窗 -->
+  <div class="log-overlay" id="cat-overlay" role="dialog" aria-modal="true">
+    <div class="log-modal">
+      <div class="log-head">
+        <h3>🗂️ 训练分类</h3>
+        <button class="modal-close" id="cat-close" aria-label="关闭">✕</button>
+      </div>
+      <div class="cat-grid" id="cat-grid"></div>
+    </div>
+  </div>
+
   <!-- 底部菜单栏 -->
   <nav class="tab-bar" id="tab-bar" aria-label="底部菜单">
     <button class="tab-item on" id="tab-train" aria-label="训练"><span class="tab-ico">🏋️</span><span class="tab-text">训练</span></button>
+    <button class="tab-item" id="tab-cat" aria-label="分类"><span class="tab-ico">🗂️</span><span class="tab-text">分类</span></button>
     <button class="tab-item" id="tab-log" aria-label="记录"><span class="tab-ico">📝</span><span class="tab-text">记录</span></button>
     <button class="tab-item" id="tab-fav" aria-label="收藏"><span class="tab-ico">❤️<span class="tab-badge" id="tab-fav-count" hidden></span></span><span class="tab-text">收藏</span></button>
   </nav>
