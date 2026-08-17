@@ -12,6 +12,16 @@
   function levelClass(lv) {
     return lv === "初级" ? "lv-1" : lv === "中级" ? "lv-2" : "lv-3";
   }
+  // 锁定滚动并补偿滚动条宽度，避免页面抖动
+  function lockScroll() {
+    const w = window.innerWidth - document.documentElement.clientWidth;
+    document.body.style.overflow = "hidden";
+    if (w > 0) document.body.style.paddingRight = w + "px";
+  }
+  function unlockScroll() {
+    document.body.style.overflow = "";
+    document.body.style.paddingRight = "";
+  }
 
   // ---------- 渲染分类说明条 ----------
   function renderCatIntro() {
@@ -204,7 +214,7 @@
     }).join("");
 
     overlay.classList.add("open");
-    document.body.style.overflow = "hidden";
+    lockScroll();
     modalFav.textContent = isFav(ex.id) ? "❤️" : "🤍";
     modalFav.classList.toggle("on", isFav(ex.id));
     $("#modal-close").focus();
@@ -216,7 +226,7 @@
 
   function closeModal() {
     overlay.classList.remove("open");
-    document.body.style.overflow = "";
+    unlockScroll();
     if (lastFocus) lastFocus.focus();
   }
 
@@ -361,11 +371,11 @@
     logMsg.textContent = "";
     renderLogs();
     logOverlay.classList.add("open");
-    document.body.style.overflow = "hidden";
+    lockScroll();
   }
   function closeLogOverlay() {
     logOverlay.classList.remove("open");
-    document.body.style.overflow = "";
+    unlockScroll();
   }
   $("#nav-logs").addEventListener("click", openLogOverlay);
   $("#log-close").addEventListener("click", closeLogOverlay);
