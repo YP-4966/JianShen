@@ -23,18 +23,6 @@
     document.body.style.paddingRight = "";
   }
 
-  // ---------- 页面左右滑动切换 ----------
-  const pagesEl = $("#pages");
-  function switchPage(idx) {
-    if (idx < 0 || idx > 2) return;
-    pagesEl.classList.remove("p0", "p1", "p2");
-    pagesEl.classList.add("p" + idx);
-    $$(".tab-item").forEach(function (t, i) {
-      t.classList.toggle("on", i === idx);
-    });
-    window.scrollTo(0, 0);
-  }
-
   // ---------- 渲染分类说明条 ----------
   function renderCatIntro() {
     const el = $("#cat-intro");
@@ -167,33 +155,29 @@
 
   const navFav = $("#nav-fav");
   const favCount = $("#fav-count");
+  const tabMe = $("#tab-me");
   const tabMeCount = $("#tab-me-count");
-  const meFavN = $("#me-fav-n");
-  const meFavBtn = $("#me-fav-btn");
   function updateFavNav() {
     const n = favs.size > 99 ? "99+" : favs.size;
     favCount.hidden = favs.size === 0;
     favCount.textContent = n;
     tabMeCount.hidden = favs.size === 0;
     tabMeCount.textContent = n;
-    if (meFavN) meFavN.textContent = favs.size;
   }
-  function updateMeFavBtn() {
-    meFavBtn.textContent = favOnly ? "退出收藏模式" : "查看我的收藏";
+  function setActiveTab(tabEl) {
+    $$(".tab-item").forEach(function (t) { t.classList.remove("on"); });
+    navFav.classList.remove("on");
+    if (tabEl) tabEl.classList.add("on");
   }
   function setFavOnly(on) {
     favOnly = on;
     navFav.classList.toggle("on", favOnly);
-    updateMeFavBtn();
     applyFilter();
   }
   navFav.addEventListener("click", function () {
-    setFavOnly(!favOnly);
-    switchPage(0);
-  });
-  meFavBtn.addEventListener("click", function () {
-    setFavOnly(!favOnly);
-    switchPage(0);
+    const next = !favOnly;
+    setFavOnly(next);
+    setActiveTab(next ? tabMe : $("#tab-train"));
   });
 
   $("#main-content").addEventListener("click", function (e) {
@@ -268,6 +252,7 @@
   document.addEventListener("keydown", function (e) {
     if (e.key !== "Escape") return;
     if (overlay.classList.contains("open")) closeModal();
+    else if (logOverlay.classList.contains("open")) closeLogOverlay();
   });
 
   // ---------- 导航高亮 ----------
@@ -347,6 +332,7 @@
     localStorage.setItem(LOG_KEY, JSON.stringify(logs));
   }
 
+  const logOverlay = $("#log-overlay");
   const logExercise = $("#log-exercise");
   const logDate = $("#log-date");
   const logSets = $("#log-sets");
@@ -381,7 +367,101 @@
         "</optgroup>";
     }).join("");
 
-  logDate.value = todayStr();
+  function openLogOverlay() {
+    logDate.value = todayStr();
+    logMsg.textContent = "";
+    renderLogs();
+    logOverlay.classList.add("open");
+    lockScroll();
+  }
+  function closeLogOverlay() {
+    logOverlay.classList.remove("open");
+    unlockScroll();
+    setActiveTab($("#tab-train"));
+  }
+  $("#nav-logs").addEventListener("click", openLogOverlay);
+  $("#tab-train").addEventListener("click", function () {
+    setActiveTab(this);
+    if (favOnly) setFavOnly(false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+  $("#log-close").addEventListener("click", closeLogOverlay);
+  logOverlay.addEventListener("click", function (e) {
+    if (e.target === logOverlay) closeLogOverlay();
+  });
+
+  // ---------- 我的（记录/收藏/下载）弹窗 ----------
+  const meOverlay = $("#me-overlay");
+  function openMeOverlay() {
+    meOverlay.classList.add("open");
+    lockScroll();
+  }
+  function closeMeOverlay() {
+    meOverlay.classList.remove("open");
+    unlockScroll();
+  }
+  $("#tab-me").addEventListener("click", function () {
+    setActiveTab(this);
+    openMeOverlay();
+  });
+  $("#me-close").addEventListener("click", function () {
+    closeMeOverlay();
+    setActiveTab($("#tab-train"));
+  });
+  meOverlay.addEventListener("click", function (e) {
+    if (e.target === meOverlay) {
+      closeMeOverlay();
+      setActiveTab($("#tab-train"));
+    }
+  });
+  $("#me-logs").addEventListener("click", function () {
+    closeMeOverlay();
+    openLogOverlay();
+  });
+  $("#me-fav").addEventListener("click", function () {
+    closeMeOverlay();
+    setFavOnly(true);
+    setActiveTab(tabMe);
+  });
+
+  // ---------- 分类快捷跳转弹窗 ----------
+  const catOverlay = $("#cat-overlay");
+  const catGrid = $("#cat-grid");
+  catGrid.innerHTML = CATEGORIES.map(function (c) {
+    const count = EXERCISES.filter(function (ex) { return ex.cat === c.id; }).length;
+    return '<a class="cat-chip" href="#cat-' + c.id + '" data-cat="' + c.id + '">' +
+      '<span class="cat-chip-ico">' + c.icon + "</span>" +
+      '<span class="cat-chip-name">' + c.name + "</span>" +
+      '<span class="cat-chip-n">' + count + " 个动作</span></a>";
+  }).join("");
+  function openCatOverlay() {
+    catOverlay.classList.add("open");
+    lockScroll();
+  }
+  function closeCatOverlay() {
+    catOverlay.classList.remove("open");
+    unlockScroll();
+  }
+  $("#tab-cat").addEventListener("click", function () {
+    setActiveTab(this);
+    openCatOverlay();
+  });
+  $("#cat-close").addEventListener("click", function () {
+    closeCatOverlay();
+    setActiveTab($("#tab-train"));
+  });
+  catOverlay.addEventListener("click", function (e) {
+    if (e.target === catOverlay) {
+      closeCatOverlay();
+      setActiveTab($("#tab-train"));
+    }
+  });
+  catGrid.addEventListener("click", function (e) {
+    const chip = e.target.closest(".cat-chip");
+    if (!chip) return;
+    closeCatOverlay();
+    setActiveTab($("#tab-train"));
+  });
 
   logSave.addEventListener("click", function () {
     const exId = logExercise.value;
@@ -455,45 +535,17 @@
     }).join("");
   }
 
-  // ---------- 分类页：九宫格快捷跳转 ----------
-  const catGrid = $("#cat-grid");
-  catGrid.innerHTML = CATEGORIES.map(function (c) {
-    const count = EXERCISES.filter(function (ex) { return ex.cat === c.id; }).length;
-    return '<a class="cat-chip" href="#cat-' + c.id + '" data-cat="' + c.id + '">' +
-      '<span class="cat-chip-ico">' + c.icon + "</span>" +
-      '<span class="cat-chip-name">' + c.name + "</span>" +
-      '<span class="cat-chip-n">' + count + " 个动作</span></a>";
-  }).join("");
-  catGrid.addEventListener("click", function (e) {
-    const chip = e.target.closest(".cat-chip");
-    if (!chip) return;
-    e.preventDefault();
-    switchPage(0);
-    setTimeout(function () {
-      const sec = document.getElementById("cat-" + chip.dataset.cat);
-      if (sec) sec.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 80);
-  });
-
-  // ---------- 底部 tab 切换 ----------
-  $("#tab-train").addEventListener("click", function () { switchPage(0); });
-  $("#tab-cat").addEventListener("click", function () { switchPage(1); });
-  $("#tab-me").addEventListener("click", function () { switchPage(2); });
-  $("#nav-logs").addEventListener("click", function () { switchPage(2); });
-
   // ---------- 初始化 ----------
   // 在原生 App（Capacitor）内隐藏"下载安卓 App"入口
   if (typeof window.Capacitor !== "undefined" && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform()) {
-    const meDownloadSection = $("#me-download-section");
-    if (meDownloadSection) meDownloadSection.style.display = "none";
+    var meDownload = $("#me-download");
+    if (meDownload) meDownload.style.display = "none";
   }
   $("#stat-total").textContent = EXERCISES.length;
   $("#stat-cat").textContent = CATEGORIES.length;
   renderCatIntro();
   renderCategories();
-  renderLogs();
   updateFavNav();
-  updateMeFavBtn();
   updateNav();
   updateBackTop();
 
