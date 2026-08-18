@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="健身房器械使用指南：有氧器械、固定器械、自由重量、自重训练的动作要领、注意事项与常见错误">
   <title>健身房器械使用指南</title>
-  <link rel="stylesheet" href="css/style.css?v=28">
+  <link rel="stylesheet" href="css/style.css?v=25">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏋️</text></svg>">
   <link rel="manifest" href="manifest.webmanifest">
   <meta name="theme-color" content="#10b981">
@@ -41,128 +41,43 @@
     </div>
   </header>
 
-  <!-- 页面容器：底部三个 tab 左右滑动切换 -->
-  <div class="pages p0" id="pages">
-
-    <!-- 页面一：训练 -->
-    <section class="page" id="page-train" data-page="0">
-
-      <!-- 搜索与筛选（吸顶固定） -->
-      <div class="toolbar" id="toolbar">
-        <select id="filter-equipment" aria-label="按器械筛选"></select>
-        <select id="filter-level" aria-label="按难度筛选">
-          <option value="">全部难度</option>
-          <option value="初级">初级</option>
-          <option value="中级">中级</option>
-          <option value="高级">高级</option>
-        </select>
-        <input type="search" id="search-input" placeholder="🔍 搜索动作，如：卧推、深蹲、引体…" autocomplete="off" aria-label="搜索动作">
-      </div>
-
-      <!-- 首屏 -->
-      <section class="hero" id="top">
-        <span class="hero-badge">新手友好 · 图文并茂 · 动作演示</span>
-        <h1>科学训练，<span class="accent">从认识器械开始</span></h1>
-        <p>覆盖训练前热身 + 全身 9 个训练部位、最常见的健身动作，每项都配有动图演示、详细步骤、注意事项和常见错误，帮你按部位科学规划训练。</p>
-        <div class="hero-stats">
-          <div class="stat"><b id="stat-total">65</b><span>经典动作</span></div>
-          <div class="stat"><b id="stat-cat">9</b><span>训练部位</span></div>
-          <div class="stat"><b>100%</b><span>动图演示</span></div>
-        </div>
-      </section>
-
-      <!-- 分类说明 -->
-      <div class="cat-intro" id="cat-intro"></div>
-
-      <!-- 主体内容 -->
-      <main id="main-content"></main>
-
-      <!-- 页脚 -->
-      <footer class="site-footer">
-        <div class="footer-inner">
-          <p>动作演示动图来自 <a href="https://exercisedb.dev/" target="_blank" rel="noopener">ExerciseDB</a> 开源数据集 · 内容仅供学习参考</p>
-          <p style="margin-top:4px;">训练前请充分热身，如有伤病请咨询专业人士</p>
-        </div>
-      </footer>
-    </section>
-
-    <!-- 页面二：分类 -->
-    <section class="page" id="page-cat" data-page="1">
-      <div class="page-head">
-        <h2>🗂️ 训练分类</h2>
-        <p>九个训练部位，点击快速直达</p>
-      </div>
-      <div class="cat-grid" id="cat-grid"></div>
-    </section>
-
-    <!-- 页面三：我的 -->
-    <section class="page" id="page-me" data-page="2">
-      <div class="page-head">
-        <h2>👤 我的</h2>
-        <p>训练记录 · 我的收藏 · 下载</p>
-      </div>
-
-      <!-- 训练记录 -->
-      <div class="me-section">
-        <h3>📝 训练记录</h3>
-        <div class="log-form">
-          <h4>记一笔</h4>
-          <div class="log-field field-full">
-            <label for="log-exercise">🏋️ 选择动作</label>
-            <select id="log-exercise" aria-label="选择动作"><option value="">选择动作…</option></select>
-          </div>
-          <div class="log-fields-row">
-            <div class="log-field">
-              <label for="log-date">📅 日期</label>
-              <input type="date" id="log-date">
-            </div>
-            <div class="log-field">
-              <label for="log-sets">🔢 组数</label>
-              <input type="number" id="log-sets" min="1" max="20" placeholder="3">
-            </div>
-            <div class="log-field">
-              <label for="log-reps">🔁 次数</label>
-              <input type="number" id="log-reps" min="1" max="200" placeholder="12">
-            </div>
-            <div class="log-field">
-              <label for="log-weight">⚖️ 重量kg</label>
-              <input type="number" id="log-weight" min="0" step="0.5" placeholder="自重可空">
-            </div>
-          </div>
-          <div class="log-actions">
-            <button class="log-save" id="log-save">保存记录</button>
-            <span class="log-msg" id="log-msg"></span>
-          </div>
-        </div>
-        <div class="log-stats" id="log-stats"></div>
-        <div class="log-list" id="log-list"></div>
-      </div>
-
-      <!-- 我的收藏 -->
-      <div class="me-section">
-        <h3>❤️ 我的收藏</h3>
-        <p class="me-desc">已收藏 <b id="me-fav-n">0</b> 个动作，点击查看合集</p>
-        <button class="me-fav-btn" id="me-fav-btn">查看我的收藏</button>
-      </div>
-
-      <!-- 下载安卓 App -->
-      <div class="me-section" id="me-download-section">
-        <h3>📱 下载安卓 App</h3>
-        <p class="me-desc">离线可用 · 图标直达 · 手机上体验更顺滑</p>
-        <a class="me-fav-btn" id="me-download" href="downloads/gymguide.apk" download>📥 下载安装包</a>
-      </div>
-    </section>
+  <!-- 搜索与筛选（吸顶固定） -->
+  <div class="toolbar" id="toolbar">
+    <select id="filter-equipment" aria-label="按器械筛选"></select>
+    <select id="filter-level" aria-label="按难度筛选">
+      <option value="">全部难度</option>
+      <option value="初级">初级</option>
+      <option value="中级">中级</option>
+      <option value="高级">高级</option>
+    </select>
+    <input type="search" id="search-input" placeholder="🔍 搜索动作，如：卧推、深蹲、引体…" autocomplete="off" aria-label="搜索动作">
   </div>
 
-  <!-- 底部菜单栏 -->
-  <nav class="tab-bar" id="tab-bar" aria-label="底部菜单">
-    <button class="tab-item on" id="tab-train" aria-label="训练"><span class="tab-ico">🏋️</span><span class="tab-text">训练</span></button>
-    <button class="tab-item" id="tab-cat" aria-label="分类"><span class="tab-ico">🗂️</span><span class="tab-text">分类</span></button>
-    <button class="tab-item" id="tab-me" aria-label="我的"><span class="tab-ico">👤<span class="tab-badge" id="tab-me-count" hidden></span></span><span class="tab-text">我的</span></button>
-  </nav>
+  <!-- 首屏 -->
+  <section class="hero" id="top">
+    <span class="hero-badge">新手友好 · 图文并茂 · 动作演示</span>
+    <h1>科学训练，<span class="accent">从认识器械开始</span></h1>
+    <p>覆盖训练前热身 + 全身 9 个训练部位、最常见的健身动作，每项都配有动图演示、详细步骤、注意事项和常见错误，帮你按部位科学规划训练。</p>
+    <div class="hero-stats">
+      <div class="stat"><b id="stat-total">65</b><span>经典动作</span></div>
+      <div class="stat"><b id="stat-cat">9</b><span>训练部位</span></div>
+      <div class="stat"><b>100%</b><span>动图演示</span></div>
+    </div>
+  </section>
 
-  <!-- 回到顶部 -->
-  <button class="back-top" id="back-top" aria-label="回到顶部">↑</button>
+  <!-- 分类说明 -->
+  <div class="cat-intro" id="cat-intro"></div>
+
+  <!-- 主体内容 -->
+  <main id="main-content"></main>
+
+  <!-- 页脚 -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>动作演示动图来自 <a href="https://exercisedb.dev/" target="_blank" rel="noopener">ExerciseDB</a> 开源数据集 · 内容仅供学习参考</p>
+      <p style="margin-top:4px;">训练前请充分热身，如有伤病请咨询专业人士</p>
+    </div>
+  </footer>
 
   <!-- 详情弹窗 -->
   <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true">
@@ -197,8 +112,99 @@
     </div>
   </div>
 
-  <script src="js/data.js?v=28"></script>
-  <script src="js/main.js?v=28"></script>
+  <!-- 训练记录弹窗 -->
+  <div class="log-overlay" id="log-overlay" role="dialog" aria-modal="true">
+    <div class="log-modal">
+      <div class="log-head">
+        <h3>📝 训练记录</h3>
+        <button class="modal-close" id="log-close" aria-label="关闭">✕</button>
+      </div>
+      <div class="log-body">
+        <div class="log-form">
+          <h4>记一笔</h4>
+          <div class="log-field field-full">
+            <label for="log-exercise">🏋️ 选择动作</label>
+            <select id="log-exercise" aria-label="选择动作"><option value="">选择动作…</option></select>
+          </div>
+          <div class="log-fields-row">
+            <div class="log-field">
+              <label for="log-date">📅 日期</label>
+              <input type="date" id="log-date">
+            </div>
+            <div class="log-field">
+              <label for="log-sets">🔢 组数</label>
+              <input type="number" id="log-sets" min="1" max="20" placeholder="3">
+            </div>
+            <div class="log-field">
+              <label for="log-reps">🔁 次数</label>
+              <input type="number" id="log-reps" min="1" max="200" placeholder="12">
+            </div>
+            <div class="log-field">
+              <label for="log-weight">⚖️ 重量kg</label>
+              <input type="number" id="log-weight" min="0" step="0.5" placeholder="自重可空">
+            </div>
+          </div>
+          <div class="log-actions">
+            <button class="log-save" id="log-save">保存记录</button>
+            <span class="log-msg" id="log-msg"></span>
+          </div>
+        </div>
+        <div class="log-stats" id="log-stats"></div>
+        <div class="log-list" id="log-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 分类快捷跳转弹窗 -->
+  <div class="log-overlay" id="cat-overlay" role="dialog" aria-modal="true">
+    <div class="log-modal">
+      <div class="log-head">
+        <h3>🗂️ 训练分类</h3>
+        <button class="modal-close" id="cat-close" aria-label="关闭">✕</button>
+      </div>
+      <div class="cat-grid" id="cat-grid"></div>
+    </div>
+  </div>
+
+  <!-- 我的（记录/收藏/下载）弹窗 -->
+  <div class="log-overlay" id="me-overlay" role="dialog" aria-modal="true">
+    <div class="log-modal">
+      <div class="log-head">
+        <h3>👤 我的</h3>
+        <button class="modal-close" id="me-close" aria-label="关闭">✕</button>
+      </div>
+      <div class="me-menu" id="me-menu">
+        <a class="me-item" id="me-logs" href="javascript:void(0)">
+          <span class="me-ico">📝</span>
+          <span class="me-main"><b>训练记录</b><i>记录每次训练的动作、组数、次数、重量</i></span>
+          <span class="me-arrow">›</span>
+        </a>
+        <a class="me-item" id="me-fav" href="javascript:void(0)">
+          <span class="me-ico">❤️</span>
+          <span class="me-main"><b>我的收藏</b><i>已收藏的动作合集，方便快速复习</i></span>
+          <span class="me-arrow">›</span>
+        </a>
+        <a class="me-item" id="me-download" href="downloads/gymguide.apk" download>
+          <span class="me-ico">📱</span>
+          <span class="me-main"><b>下载安卓 App</b><i>离线可用 · 图标直达 · 手机上体验更顺滑</i></span>
+          <span class="me-arrow">›</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 底部菜单栏 -->
+  <nav class="tab-bar" id="tab-bar" aria-label="底部菜单">
+    <button class="tab-item on" id="tab-train" aria-label="训练"><span class="tab-ico">🏋️</span><span class="tab-text">训练</span></button>
+    <button class="tab-item" id="tab-cat" aria-label="分类"><span class="tab-ico">🗂️</span><span class="tab-text">分类</span></button>
+    <button class="tab-item" id="tab-me" aria-label="我的"><span class="tab-ico">👤<span class="tab-badge" id="tab-me-count" hidden></span></span><span class="tab-text">我的</span></button>
+  </nav>
+
+  <!-- 回到顶部 -->
+  <button class="back-top" id="back-top" aria-label="回到顶部">↑</button>
+
+  <script src="js/data.js?v=25"></script>
+  <script src="js/main.js?v=25"></script>
   <script>
     // PWA：注册 Service Worker 实现离线缓存与安装能力
     if ("serviceWorker" in navigator) {
