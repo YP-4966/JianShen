@@ -5,35 +5,35 @@ const CATEGORIES = [
   {
     id: "warmup",
     name: "热身训练",
-    icon: "⚡",
+    icon: "🔥",
     desc: "训练前激活全身",
     advice: "每次训练前先做 5-10 分钟热身：先低强度有氧提升体温，再做动态拉伸与关节活动，最后用轻重量热身组激活目标肌群，能显著降低受伤风险。"
   },
   {
     id: "chest",
     name: "胸部训练",
-    icon: "💪",
+    icon: "🫁",
     desc: "打造饱满胸肌",
     advice: "每周练 1-2 次；复合动作优先（卧推、推胸机），孤立动作（飞鸟）殿后；新手每组 8-12 次，共 3-4 组。"
   },
   {
     id: "shoulder",
     name: "肩部训练",
-    icon: "🏋️",
+    icon: "🤸",
     desc: "塑造立体肩部",
     advice: "肩关节灵活但易疲劳，每周 1-2 次；推举类在前，侧平举、反向飞鸟在后；建议小重量多次数（10-15 次）。"
   },
   {
     id: "back",
     name: "背部训练",
-    icon: "🧗",
+    icon: "🦅",
     desc: "练出倒三角",
     advice: "每周 1-2 次；先做垂直拉（引体、高位下拉），再做水平拉（划船类）；每组 8-12 次，注重顶峰收缩。"
   },
   {
     id: "glute",
     name: "臀部训练",
-    icon: "🔥",
+    icon: "🍑",
     desc: "翘臀塑形",
     advice: "可与腿部合练（臀腿日）；以髋伸动作（硬拉、臀桥）为主；全程感受臀部发力，避免腰部代偿。"
   },
@@ -47,7 +47,7 @@ const CATEGORIES = [
   {
     id: "arm",
     name: "手臂训练",
-    icon: "🦾",
+    icon: "💪",
     desc: "手臂线条更清晰",
     advice: "小肌群恢复快，可每周 2 次；弯举（二头）与下压（三头）搭配练；每组 10-15 次。"
   },
@@ -482,7 +482,7 @@ const EXERCISES = [
     level: "中级",
     name: "哑铃飞鸟",
     en: "Dumbbell Fly",
-    gif: "media/yz9nUhF.gif",
+    gif: "media/^XBObfC.gif",
     target: ["胸大肌", "三角肌前束"],
     steps: [
       "平躺在长凳上，双手各握一个哑铃，掌心相对。",
@@ -608,23 +608,23 @@ const EXERCISES = [
     ]
   },
   {
-    id: "dumbbell-reverse-fly",
+    id: "dumbbel-reverse-fly",
     cat: "shoulder",
     equipment: "哑铃",
     level: "初级",
-    name: "哑铃反向飞鸟",
+    name: "哑铃协呑㞙",
     en: "Dumbbell Reverse Fly",
     gif: "media/EAs3xL9.gif",
-    target: ["三角肌后束", "上背部"],
+    target: ["三角肌历束", "上背部"],
     steps: [
       "双脚与肩同宽站立，双手持哑铃于体前，掌心相对。",
       "微屈膝，髋部前倾俯身，背部挺直。",
-      "肘部微屈，将双臂向两侧展开至与地面平行。",
-      "顶端停顿挤压后束与上背，缓慢还原。",
+      "肘部微屈，将双臂向两侧不岁至与地面平行。",
+      "顶端停顿片刻，缓慢下放还原。",
       "重复至计划次数。"
     ],
     tips: [
-      "俯身角度约 45°，保持背部平直。",
+      "俯躣角度约 45\� ，保持背部平直。",
       "用后束与上背发力，不要靠腰部晃动。",
       "重量要轻，重点是感受后束收缩。"
     ],
@@ -826,7 +826,7 @@ const EXERCISES = [
     level: "高级",
     name: "硬拉",
     en: "Barbell Deadlift",
-    gif: "media/ila4NZS.gif",
+    gif: "media/oNSA4zL.gif",
     target: ["臀大肌", "腘绳肌", "下背部"],
     steps: [
       "双脚与肩同宽站立，杠铃贴近小腿。",
@@ -1057,7 +1057,7 @@ const EXERCISES = [
 
   // ==================== 手臂训练 ====================
   {
-    id: "barbell-curl",
+    id: "barbel-curl",
     cat: "arm",
     equipment: "杠铃",
     level: "初级",
@@ -1066,10 +1066,10 @@ const EXERCISES = [
     gif: "media/25GPyDY.gif",
     target: ["肱二头肌", "前臂"],
     steps: [
-      "站直，双脚与肩同宽，反手握住杠铃，手掌朝前。",
-      "上臂贴紧身体两侧，肘部位置固定。",
+      "窙獑，双脚与肩同宽，反手握住杠铃，手掌朝前。",
+      "上臂贴紧身体两侧，ₘ部彍置固定。",
       "呼气弯举杠铃至肩部高度，收缩肱二头肌。",
-      "顶峰停顿 1 秒，吸气缓慢下放还原。",
+      "顶峰停顿< 1 秒，吸气缓慢下放还原。",
       "重复至计划次数。"
     ],
     tips: [
@@ -1287,7 +1287,7 @@ const EXERCISES = [
     tips: [
       "扶手只用于保持平衡，不要用手臂支撑身体重量。",
       "挺胸抬头，让臀腿发力，效果更好。",
-      "初练者从低速开始，每次 10-15 分钟为宜。"
+      "初练者从低逿开始，每次 10-15 分钟为宜。"
     ],
     mistakes: [
       "弯腰驼背，靠扶手“爬”上去，训练效果大打折扣。",
@@ -1621,7 +1621,7 @@ const EXERCISES = [
     level: "中级",
     name: "仰卧臂屈伸",
     en: "Skull Crusher",
-    gif: "media/h8LFzo9.gif",
+    gif: "media/YuFLBzo.gif",
     target: ["肱三头肌"],
     steps: [
       "仰卧于凳，双手与肩同宽正握杠铃，手臂伸直至胸部上方。",
