@@ -1,5 +1,5 @@
 // 健身房器械使用指南 - Service Worker（PWA 离线缓存）
-const CACHE = "jianshen-v2";
+const CACHE = "jianshen-v3";
 const CORE = ["./", "./index.html", "./css/style.css", "./js/data.js", "./js/main.js", "./manifest.webmanifest"];
 
 // 安装：预缓存核心资源
