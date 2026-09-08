@@ -73,6 +73,36 @@
       advice.textContent = "💡 训练建议：" + cat.advice;
       section.appendChild(advice);
 
+      // 拉伸板块：按训练部位筛选推荐
+      if (cat.id === "stretch") {
+        const relaxBar = document.createElement("div");
+        relaxBar.className = "relax-bar";
+        const todayCat = CATEGORIES.filter(function (c) {
+          return c.id !== "stretch" && c.id !== "warmup";
+        });
+        relaxBar.innerHTML =
+          '<span class="relax-label">🧘 今天我练了哪个部位：</span>' +
+          '<button class="relax-chip on" data-relax="">全部</button>' +
+          todayCat
+            .map(function (c) {
+              return '<button class="relax-chip" data-relax="' + c.id + '">' + c.icon + " " + c.name.replace("训练", "") + "</button>";
+            })
+            .join("");
+        section.appendChild(relaxBar);
+        relaxBar.addEventListener("click", function (e) {
+          const chip = e.target.closest(".relax-chip");
+          if (!chip) return;
+          $$(".relax-chip", relaxBar).forEach(function (c) { c.classList.remove("on"); });
+          chip.classList.add("on");
+          const sel = chip.dataset.relax;
+          $$(".card", grid).forEach(function (card) {
+            const ex = exById[card.dataset.exId];
+            const ok = !sel || (ex.relax || []).indexOf(sel) !== -1;
+            card.style.display = ok ? "" : "none";
+          });
+        });
+      }
+
       const grid = document.createElement("div");
       grid.className = "grid";
       items.forEach((ex) => grid.appendChild(buildCard(ex)));

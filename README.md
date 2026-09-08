@@ -3,8 +3,8 @@
 > 面向健身房新手与进阶训练者的健身动作指南网页。按训练部位分类，每个动作配有 **GIF 动图演示**、详细步骤、注意事项与常见错误，帮助你安全、科学地安排每一次训练。
 
 - 🔗 在线预览：<https://yp-4966.github.io/JianShen/>
-- 📦 安卓安装包：`downloads/gymguide.apk`（v2.8 / versionCode 28，与网页 v28 内容同步，可覆盖安装）
-- 🏷️ 当前版本：**v28**
+- 📦 安卓安装包：`downloads/gymguide.apk`（v2.9 / versionCode 29，与网页 v29 内容同步，可覆盖安装）
+- 🏷️ 当前版本：**v29**
 
 ---
 
@@ -51,7 +51,7 @@
 - **纯前端静态站**：原生 HTML + CSS + JavaScript，无框架、无构建工具
 - **数据驱动渲染**：动作数据集中在 `js/data.js`，页面由 `js/main.js` 动态渲染
 - **PWA 离线能力**：`manifest.webmanifest`（安装清单）+ `sw.js`（Service Worker）
-  - 缓存名称 `jianshen-v5`，预缓存核心文件
+  - 缓存名称 `jianshen-v6`，预缓存核心文件
   - 缓存策略：stale-while-revalidate（先返回缓存，后台更新）
 - **Capacitor 打包 APK**：将网页封装为 Android 应用（离线可用、图标直达）
 - **GitHub Pages 部署**：main 分支 / 根目录，推送后自动发布
@@ -62,7 +62,7 @@
 
 ```
 /workspace
-├── index.html              # 页面入口（引用资源带 ?v=28 版本参数）
+├── index.html              # 页面入口（引用资源带 ?v=29 版本参数）
 ├── css/
 │   └── style.css           # 全局样式（CSS 变量主题、网格布局、吸顶导航、弹窗）
 ├── js/
@@ -75,7 +75,7 @@
 ├── manifest.webmanifest    # PWA 安装清单
 ├── sw.js                   # Service Worker（离线缓存）
 ├── downloads/
-│   └── gymguide.apk        # Android 安装包（v2.8，含 v28 内容）
+│   └── gymguide.apk        # Android 安装包（v2.9，含 v29 内容）
 ├── README.md               # 项目文档（本文件）
 └── package.json            # 仅用于本地开发脚本的依赖（jsdom / puppeteer-core）
 ```
@@ -136,7 +136,8 @@ git push origin main
 
 ## 🗂️ 版本历史要点
 
-- **v28（当前）**：胸部新增「坐式胸肌推举训练器」固定器械；全新「拉伸放松」板块，收录 8 个训练后静态拉伸动作（腿/臀/胸/肩/背/三头/扭转）（81 → 90）
+- **v29（当前）**：「拉伸放松」板块新增按训练部位推荐——选择「今天我练了哪个部位」即可过滤出对应拉伸动作；所有拉伸均为徒手、单人完成（8 → 8 个）
+- **v28**：胸部新增「坐式胸肌推举训练器」固定器械；全新「拉伸放松」板块，收录 8 个训练后静态拉伸动作（腿/臀/胸/肩/背/三头/扭转）（81 → 90）
 - **v27**：新增坐姿三头屈伸机、坐姿后踢腿机两个乐刻器械；全部模块重排序——固定器械在前、自由训练在后（79 → 81）；安卓安装包同步更新（versionCode 27 / versionName 2.7，覆盖安装即可升级）
 - **v26**：新增乐刻门店固定器械 10 个 + 徒手热身 4 个（65 → 79）
 - **v25**：稳定版。三 Tab 底部导航（训练/分类/我的）、搜索筛选、收藏、训练记录、PWA 离线、APK 打包

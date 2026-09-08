@@ -70,7 +70,7 @@ const CATEGORIES = [
     name: "拉伸放松",
     icon: "🧘",
     desc: "训练后拉伸放松",
-    advice: "训练结束后做 5-10 分钟静态拉伸，每个动作保持 20-30 秒，配合深长呼吸。拉伸能缓解肌肉紧张、促进恢复、降低次日照酸痛，改善柔韧性与关节活动度。"
+    advice: "训练结束后做 5-10 分钟静态拉伸，每个动作保持 20-30 秒，配合深长呼吸。所有拉伸动作均为徒手、单人即可完成，无需他人协助。点上方「今天我练了哪个部位」选择本次训练部位，即可看到对应的推荐拉伸。"
   }
 ];
 
@@ -2186,6 +2186,7 @@ const EXERCISES = [
     en: "Seated Hamstring Stretch",
     gif: "media/99rWm7w.gif",
     target: ["腘绳肌"],
+    relax: ["leg", "warmup"],
     steps: [
       "坐姿，左腿伸直，右腿屈曲收向体侧。",
       "保持背部挺直，俯身向前伸向左脚。",
@@ -2211,6 +2212,7 @@ const EXERCISES = [
     en: "Standing Quad Stretch",
     gif: "media/tFGKm99.gif",
     target: ["股四头肌", "髋屈肌"],
+    relax: ["leg", "glute", "warmup"],
     steps: [
       "站立，左手扶墙或固定物保持平衡。",
       "右腿向后屈膝，右手抓住右脚踝向臀部方向拉。",
@@ -2236,6 +2238,7 @@ const EXERCISES = [
     en: "Lying Glute Stretch",
     gif: "media/yn0LjwL.gif",
     target: ["臀大肌", "臀中肌", "梨状肌"],
+    relax: ["glute", "leg"],
     steps: [
       "仰卧，双腿伸直。",
       "右腿屈膝，将右脚踝搭在左大腿上方（四字交叉）。",
@@ -2261,6 +2264,7 @@ const EXERCISES = [
     en: "Seated Calf Stretch",
     gif: "media/GxDwDX0.gif",
     target: ["腓肠肌", "比目鱼肌"],
+    relax: ["leg", "cardio", "warmup"],
     steps: [
       "坐姿，双腿伸直。",
       "双手或借助毛巾扣住前脚掌。",
@@ -2286,6 +2290,7 @@ const EXERCISES = [
     en: "Standing Pec Stretch",
     gif: "media/chfnQnM.gif",
     target: ["胸大肌", "背阔肌"],
+    relax: ["chest", "shoulder"],
     steps: [
       "站立，双脚与肩同宽。",
       "双臂伸直前平举，双手交叉、掌心翻转朝外。",
@@ -2311,6 +2316,7 @@ const EXERCISES = [
     en: "Rear Deltoid Stretch",
     gif: "media/xifhB5W.gif",
     target: ["三角肌后束", "斜方肌"],
+    relax: ["shoulder", "back"],
     steps: [
       "站立，肩背放松。",
       "右臂伸直横过胸前，左手扶住右肘。",
@@ -2336,6 +2342,7 @@ const EXERCISES = [
     en: "Overhead Triceps Stretch",
     gif: "media/Z5YStHW.gif",
     target: ["肱三头肌"],
+    relax: ["arm", "chest"],
     steps: [
       "站立或坐姿，双脚与肩同宽。",
       "右臂上举过头并屈肘，手掌靠近后背肩胛处。",
@@ -2361,6 +2368,7 @@ const EXERCISES = [
     en: "Supine Spinal Twist",
     gif: "media/pZwUsKB.gif",
     target: ["躯干侧链", "背部", "臀大肌"],
+    relax: ["back", "core", "glute"],
     steps: [
       "仰卧，四肢伸展，双臂打开呈一条直线放于两侧。",
       "双腿并拢屈膝，缓慢倒向身体一侧，膝部接近地面。",
