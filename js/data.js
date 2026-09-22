@@ -83,7 +83,7 @@ const EXERCISES = [
     level: "初级",
     name: "开合跳",
     en: "Jumping Jack",
-    gif: "media/1g5bPpA.gif",
+    gif: "media/1g5bPpA.webp",
     target: ["心肺功能", "全身"],
     steps: [
       "双脚并拢站立，双臂自然下垂于身体两侧。",
@@ -108,7 +108,7 @@ const EXERCISES = [
     level: "初级",
     name: "高抬腿",
     en: "High Knees",
-    gif: "media/ealLwvX.gif",
+    gif: "media/ealLwvX.webp",
     target: ["心肺功能", "下肢"],
     steps: [
       "面向墙壁站立，双手扶墙保持平衡。",
@@ -133,7 +133,7 @@ const EXERCISES = [
     level: "初级",
     name: "毛毛虫爬行",
     en: "Inchworm",
-    gif: "media/ZgsNQ6d.gif",
+    gif: "media/ZgsNQ6d.webp",
     target: ["腘绳肌", "核心", "肩部"],
     steps: [
       "站立，俯身弯腰，双手触地。",
@@ -158,7 +158,7 @@ const EXERCISES = [
     level: "初级",
     name: "登山跑",
     en: "Mountain Climber",
-    gif: "media/RJgzwny.gif",
+    gif: "media/RJgzwny.webp",
     target: ["核心", "心肺功能"],
     steps: [
       "高位平板支撑，双手在肩部正下方，身体呈一条直线。",
@@ -183,7 +183,7 @@ const EXERCISES = [
     level: "初级",
     name: "臀桥交替抬腿",
     en: "Glute Bridge March",
-    gif: "media/GibBPPg.gif",
+    gif: "media/GibBPPg.webp",
     target: ["臀大肌", "核心"],
     steps: [
       "仰卧，屈膝，双脚踩实地面。",
@@ -208,7 +208,7 @@ const EXERCISES = [
     level: "初级",
     name: "胸肩前侧拉伸",
     en: "Chest & Shoulder Stretch",
-    gif: "media/Uto7l43.gif",
+    gif: "media/Uto7l43.webp",
     target: ["胸肌", "肩部前侧"],
     steps: [
       "站立，双臂前伸与肩同高。",
@@ -233,7 +233,7 @@ const EXERCISES = [
     level: "初级",
     name: "踝关节环绕",
     en: "Ankle Circles",
-    gif: "media/uL9CsKm.gif",
+    gif: "media/uL9CsKm.webp",
     target: ["脚踝", "小腿"],
     steps: [
       "坐姿，双腿伸直于身前。",
@@ -258,7 +258,7 @@ const EXERCISES = [
     level: "初级",
     name: "腕关节环绕",
     en: "Wrist Circles",
-    gif: "media/2zNKRUB.gif",
+    gif: "media/2zNKRUB.webp",
     target: ["手腕", "前臂"],
     steps: [
       "双臂向前伸直，双手握拳。",
@@ -283,7 +283,7 @@ const EXERCISES = [
     level: "初级",
     name: "颈侧拉伸",
     en: "Neck Side Stretch",
-    gif: "media/x2chWLO.gif",
+    gif: "media/x2chWLO.webp",
     target: ["颈部", "斜方肌"],
     steps: [
       "站直或坐直，肩膀放松下沉。",
@@ -308,7 +308,7 @@ const EXERCISES = [
     level: "初级",
     name: "体侧屈",
     en: "Side Bend",
-    gif: "media/Hy9D21L.gif",
+    gif: "media/Hy9D21L.webp",
     target: ["腹斜肌", "侧腰"],
     steps: [
       "双脚与肩同宽站立，双臂自然下垂于体侧。",
@@ -333,7 +333,7 @@ const EXERCISES = [
     level: "初级",
     name: "弓步走",
     en: "Walking Lunge",
-    gif: "media/IZVHb27.gif",
+    gif: "media/IZVHb27.webp",
     target: ["股四头肌", "臀大肌", "腘绳肌"],
     steps: [
       "双脚与肩同宽站立。",
@@ -358,7 +358,7 @@ const EXERCISES = [
     level: "初级",
     name: "小腿拉伸",
     en: "Calf Stretch",
-    gif: "media/m0tCHqc.gif",
+    gif: "media/m0tCHqc.webp",
     target: ["小腿"],
     steps: [
       "面向墙壁站立，双手扶墙与肩同高。",
@@ -383,7 +383,7 @@ const EXERCISES = [
     level: "初级",
     name: "小步慢跑",
     en: "Short Stride Run",
-    gif: "media/CcWEoWV.gif",
+    gif: "media/CcWEoWV.webp",
     target: ["全身", "心肺功能"],
     steps: [
       "身体站直，双手握拳自然摆臂，双脚自然站立。",
@@ -408,7 +408,7 @@ const EXERCISES = [
     level: "初级",
     name: "深蹲过顶伸展",
     en: "Squat to Overhead Reach",
-    gif: "media/QChZi3x.gif",
+    gif: "media/QChZi3x.webp",
     target: ["下肢", "肩背", "全身"],
     steps: [
       "双脚略宽于肩站立，脚尖微微外展。",
@@ -433,7 +433,7 @@ const EXERCISES = [
     level: "初级",
     name: "熊爬",
     en: "Bear Crawl",
-    gif: "media/0Yz8WdV.gif",
+    gif: "media/0Yz8WdV.webp",
     target: ["核心", "肩背", "全身"],
     steps: [
       "双手双脚撑地，膝盖离地，臀部略高于肩。",
@@ -458,7 +458,7 @@ const EXERCISES = [
     level: "初级",
     name: "半蹲跳",
     en: "Semi Squat Jump",
-    gif: "media/6FMU51h.gif",
+    gif: "media/6FMU51h.webp",
     target: ["下肢", "心肺功能"],
     steps: [
       "双脚与肩同宽站立，屈膝下蹲至半蹲位置。",
@@ -484,7 +484,7 @@ const EXERCISES = [
     level: "初级",
     name: "舒华卧姿推胸训练器",
     en: "SHUA Decline Chest Press (SH-G7801)",
-    gif: "media/ETZfAbZ.gif",
+    gif: "media/ETZfAbZ.webp",
     target: ["胸大肌下束", "肱三头肌", "三角肌前束"],
     steps: [
       "将训练凳调至下斜角度，双脚卡住海绵滚轴固定。",
@@ -509,7 +509,7 @@ const EXERCISES = [
     level: "初级",
     name: "坐式胸肌推举训练器",
     en: "Lever Seated Chest Press",
-    gif: "media/T0yTjgW.gif",
+    gif: "media/T0yTjgW.webp",
     target: ["胸大肌", "肱三头肌", "三角肌前束"],
     steps: [
       "调整座椅高度，背部贴紧靠垫坐好，双脚踩实地面。",
@@ -535,7 +535,7 @@ const EXERCISES = [
     level: "初级",
     name: "坐姿推胸机",
     en: "Machine Chest Press",
-    gif: "media/DOoWcnA.gif",
+    gif: "media/DOoWcnA.webp",
     target: ["胸大肌", "肱三头肌", "三角肌"],
     steps: [
       "调整座椅高度，使手柄与胸部中缝齐平，背部贴紧靠垫。",
@@ -561,7 +561,7 @@ const EXERCISES = [
     level: "初级",
     name: "蝴蝶机夹胸",
     en: "Pec Deck",
-    gif: "media/v3xmPAR.gif",
+    gif: "media/v3xmPAR.webp",
     target: ["胸大肌", "三角肌前束"],
     steps: [
       "调整座椅高度，背部贴紧靠垫。",
@@ -587,7 +587,7 @@ const EXERCISES = [
     level: "初级",
     name: "史密斯卧推",
     en: "Smith Machine Bench Press",
-    gif: "media/trqKQv2.gif",
+    gif: "media/trqKQv2.webp",
     target: ["胸大肌", "肱三头肌"],
     steps: [
       "将平板凳置于史密斯杠下方，杠降至胸口上方约一拳处。",
@@ -612,7 +612,7 @@ const EXERCISES = [
     level: "初级",
     name: "坐姿上斜推胸机",
     en: "Lever Incline Chest Press",
-    gif: "media/o17Jfkt.gif",
+    gif: "media/o17Jfkt.webp",
     target: ["胸大肌上束", "肱三头肌"],
     steps: [
       "调整座椅高度，使把手与胸部中上位置齐平。",
@@ -637,7 +637,7 @@ const EXERCISES = [
     level: "中级",
     name: "杠铃卧推",
     en: "Barbell Bench Press",
-    gif: "media/EIeI8Vf.gif",
+    gif: "media/EIeI8Vf.webp",
     target: ["胸大肌", "肱三头肌", "三角肌前束"],
     steps: [
       "平躺于卧推凳，双脚踩实地面，肩胛骨后缩下沉。",
@@ -663,7 +663,7 @@ const EXERCISES = [
     level: "初级",
     name: "哑铃卧推",
     en: "Dumbbell Bench Press",
-    gif: "media/SpYC0Kp.gif",
+    gif: "media/SpYC0Kp.webp",
     target: ["胸大肌", "肱三头肌", "三角肌前束"],
     steps: [
       "平躺于卧推凳，双手持哑铃于大腿上方，用膝盖辅助踢起至胸部上方。",
@@ -689,7 +689,7 @@ const EXERCISES = [
     level: "中级",
     name: "哑铃飞鸟",
     en: "Dumbbell Fly",
-    gif: "media/yz9nUhF.gif",
+    gif: "media/yz9nUhF.webp",
     target: ["胸大肌", "三角肌前束"],
     steps: [
       "平躺在长凳上，双手各握一个哑铃，掌心相对。",
@@ -715,7 +715,7 @@ const EXERCISES = [
     level: "初级",
     name: "俯卧撑",
     en: "Push-Up",
-    gif: "media/I4hDWkc.gif",
+    gif: "media/I4hDWkc.webp",
     target: ["胸大肌", "肱三头肌", "核心"],
     steps: [
       "高位平板支撑起始，双手略宽于肩，身体呈一条直线。",
@@ -741,7 +741,7 @@ const EXERCISES = [
     level: "高级",
     name: "双杠臂屈伸",
     en: "Chest Dip",
-    gif: "media/XgWyAiA.gif",
+    gif: "media/XgWyAiA.webp",
     target: ["胸大肌", "肱三头肌", "三角肌前束"],
     steps: [
       "双手撑在双杠上，手臂伸直，身体略前倾。",
@@ -767,7 +767,7 @@ const EXERCISES = [
     level: "中级",
     name: "绳索夹胸",
     en: "Cable Fly",
-    gif: "media/Pr9Rhf4.gif",
+    gif: "media/Pr9Rhf4.webp",
     target: ["胸大肌", "三角肌前束"],
     steps: [
       "将滑轮调整至胸部高度，双手握手柄，背对器械站立。",
@@ -793,7 +793,7 @@ const EXERCISES = [
     level: "初级",
     name: "辅助双杠臂屈伸",
     en: "Assisted Chest Dip",
-    gif: "media/PAgTVaK.gif",
+    gif: "media/PAgTVaK.webp",
     target: ["胸大肌", "肱三头肌", "三角肌"],
     steps: [
       "调整辅助重量，双膝跪在垫板上，双手正握把手。",
@@ -818,7 +818,7 @@ const EXERCISES = [
     level: "中级",
     name: "史密斯上斜卧推",
     en: "Smith Incline Bench Press",
-    gif: "media/5v7KYld.gif",
+    gif: "media/5v7KYld.webp",
     target: ["胸大肌上束", "三角肌前束", "肱三头肌"],
     steps: [
       "将训练凳调至 30-45° 上斜，背部贴紧凳面，双脚踩实。",
@@ -843,7 +843,7 @@ const EXERCISES = [
     level: "初级",
     name: "内侧胸推机",
     en: "Machine Inner Chest Press",
-    gif: "media/wDN97Ca.gif",
+    gif: "media/wDN97Ca.webp",
     target: ["胸大肌", "肱三头肌", "三角肌前束"],
     steps: [
       "调整座椅高度，背部贴紧靠垫，双手正握把手。",
@@ -869,7 +869,7 @@ const EXERCISES = [
     level: "初级",
     name: "舒华卧式推肩训练器",
     en: "SHUA Seated Shoulder Press (SH-G7805)",
-    gif: "media/xUwnBMT.gif",
+    gif: "media/xUwnBMT.webp",
     target: ["三角肌", "肱三头肌", "上背部"],
     steps: [
       "调整座椅高度使握把与肩齐平，背部贴紧靠垫。",
@@ -894,7 +894,7 @@ const EXERCISES = [
     level: "初级",
     name: "坐姿器械推举",
     en: "Machine Shoulder Press",
-    gif: "media/67n3r98.gif",
+    gif: "media/67n3r98.webp",
     target: ["三角肌", "肱三头肌"],
     steps: [
       "调整座椅高度，背部贴紧靠背。",
@@ -920,7 +920,7 @@ const EXERCISES = [
     level: "初级",
     name: "坐姿反向飞鸟机",
     en: "Lever Seated Reverse Fly",
-    gif: "media/myfUsKf.gif",
+    gif: "media/myfUsKf.webp",
     target: ["三角肌后束", "上背"],
     steps: [
       "面对器械坐好，胸部贴住靠垫，双手握两侧把手。",
@@ -944,7 +944,7 @@ const EXERCISES = [
     level: "中级",
     name: "杠铃站姿推举",
     en: "Barbell Military Press",
-    gif: "media/wdRZISl.gif",
+    gif: "media/wdRZISl.webp",
     target: ["三角肌", "肱三头肌"],
     steps: [
       "双脚与肩同宽站立，正手握杠，握距略窄于肩。",
@@ -970,7 +970,7 @@ const EXERCISES = [
     level: "初级",
     name: "哑铃肩上推举",
     en: "Dumbbell Overhead Press",
-    gif: "media/A6wtbuL.gif",
+    gif: "media/A6wtbuL.webp",
     target: ["三角肌", "肱三头肌"],
     steps: [
       "双脚与肩同宽站立（或坐姿），双手持哑铃举至肩高，手掌朝前。",
@@ -996,7 +996,7 @@ const EXERCISES = [
     level: "初级",
     name: "哑铃侧平举",
     en: "Dumbbell Lateral Raise",
-    gif: "media/DsgkuIt.gif",
+    gif: "media/DsgkuIt.webp",
     target: ["三角肌中束"],
     steps: [
       "双脚与肩同宽站立，双手持哑铃于体侧，掌心相对。",
@@ -1022,7 +1022,7 @@ const EXERCISES = [
     level: "初级",
     name: "哑铃反向飞鸟",
     en: "Dumbbell Reverse Fly",
-    gif: "media/EAs3xL9.gif",
+    gif: "media/EAs3xL9.webp",
     target: ["三角肌后束", "上背部"],
     steps: [
       "双脚与肩同宽站立，双手持哑铃于体前，掌心相对。",
@@ -1048,7 +1048,7 @@ const EXERCISES = [
     level: "初级",
     name: "哑铃前平举",
     en: "Dumbbell Front Raise",
-    gif: "media/3eGE2JC.gif",
+    gif: "media/3eGE2JC.webp",
     target: ["三角肌前束"],
     steps: [
       "双脚与肩同宽站立，双手持哑铃于体前，掌心朝后。",
@@ -1073,7 +1073,7 @@ const EXERCISES = [
     level: "初级",
     name: "杠铃直立划船",
     en: "Barbell Upright Row",
-    gif: "media/UDlhcO8.gif",
+    gif: "media/UDlhcO8.webp",
     target: ["三角肌", "斜方肌", "肱二头肌"],
     steps: [
       "双脚与肩同宽站立，正手握杠，握距略宽于肩。",
@@ -1100,7 +1100,7 @@ const EXERCISES = [
     level: "初级",
     name: "绳索侧平举",
     en: "Cable Lateral Raise",
-    gif: "media/goJ6ezq.gif",
+    gif: "media/goJ6ezq.webp",
     target: ["三角肌中束"],
     steps: [
       "站立于绳索龙门架中央，双手各握一侧把手（或单侧站姿交替）。",
@@ -1126,7 +1126,7 @@ const EXERCISES = [
     level: "初级",
     name: "绳索面拉",
     en: "Cable Rear Delt Row",
-    gif: "media/wqNPGCg.gif",
+    gif: "media/wqNPGCg.webp",
     target: ["三角肌后束", "斜方肌", "菱形肌"],
     steps: [
       "将绳索把手挂在低位滑轮上，面对器械站立。",
@@ -1151,7 +1151,7 @@ const EXERCISES = [
     level: "中级",
     name: "哑铃阿诺德推举",
     en: "Dumbbell Arnold Press",
-    gif: "media/Xy4jlWA.gif",
+    gif: "media/Xy4jlWA.webp",
     target: ["三角肌", "肱三头肌", "上胸"],
     steps: [
       "坐于有靠背的凳上，双手持哑铃于肩前，掌心朝向自己。",
@@ -1177,7 +1177,7 @@ const EXERCISES = [
     level: "初级",
     name: "坐姿器械侧平举",
     en: "Lever Lateral Raise",
-    gif: "media/dRTfGZT.gif",
+    gif: "media/dRTfGZT.webp",
     target: ["三角肌中束"],
     steps: [
       "调整座椅高度，背部贴紧靠垫坐好。",
@@ -1203,7 +1203,7 @@ const EXERCISES = [
     level: "初级",
     name: "史密斯肩推",
     en: "Smith Shoulder Press",
-    gif: "media/903mzG8.gif",
+    gif: "media/903mzG8.webp",
     target: ["三角肌", "肱三头肌"],
     steps: [
       "调整座椅高度，杠铃杆置于肩部高度，双脚踩实地面。",
@@ -1229,7 +1229,7 @@ const EXERCISES = [
     level: "初级",
     name: "坐姿器械军事推举",
     en: "Lever Military Press",
-    gif: "media/CggQhII.gif",
+    gif: "media/CggQhII.webp",
     target: ["三角肌", "肱三头肌", "上胸"],
     steps: [
       "调整座椅高度，背部贴紧靠垫，双脚踩实地面。",
@@ -1254,7 +1254,7 @@ const EXERCISES = [
     level: "初级",
     name: "史密斯后束划船",
     en: "Smith Rear Delt Row",
-    gif: "media/nFUwqG6.gif",
+    gif: "media/nFUwqG6.webp",
     target: ["三角肌后束", "斜方肌", "菱形肌"],
     steps: [
       "调整座椅高度，胸口贴住靠垫坐好，双脚踩实。",
@@ -1280,7 +1280,7 @@ const EXERCISES = [
     level: "初级",
     name: "舒华斜式坐姿划船训练器",
     en: "SHUA Incline Seated Row (SH-G7804)",
-    gif: "media/IGjKj1v.gif",
+    gif: "media/IGjKj1v.webp",
     target: ["上背部", "肱二头肌", "前臂"],
     steps: [
       "调整座椅高度与踏板位置，双脚踩实踏板上。",
@@ -1305,7 +1305,7 @@ const EXERCISES = [
     level: "初级",
     name: "高位下拉",
     en: "Lat Pulldown",
-    gif: "media/LEprlgG.gif",
+    gif: "media/LEprlgG.webp",
     target: ["背阔肌", "肱二头肌", "菱形肌"],
     steps: [
       "坐在高位下拉机上，大腿固定在护垫下方。",
@@ -1331,7 +1331,7 @@ const EXERCISES = [
     level: "初级",
     name: "坐姿划船",
     en: "Seated Cable Row",
-    gif: "media/fUBheHs.gif",
+    gif: "media/fUBheHs.webp",
     target: ["上背部", "肱二头肌", "前臂"],
     steps: [
       "坐在划船机上，双脚踩稳踏板，膝盖微屈。",
@@ -1357,7 +1357,7 @@ const EXERCISES = [
     level: "中级",
     name: "反握高位下拉",
     en: "Reverse-Grip Lat Pulldown",
-    gif: "media/ecpY0rH.gif",
+    gif: "media/ecpY0rH.webp",
     target: ["背阔肌", "肱二头肌"],
     steps: [
       "坐在高位下拉机上，大腿固定，反手握杆（掌心朝自己），握距略窄于肩。",
@@ -1383,7 +1383,7 @@ const EXERCISES = [
     level: "初级",
     name: "器械坐姿划船",
     en: "Machine Seated Row",
-    gif: "media/7I6LNUG.gif",
+    gif: "media/7I6LNUG.webp",
     target: ["上背部", "背阔肌", "肱二头肌"],
     steps: [
       "调整座椅，胸部贴紧垫子，双脚踩稳踏板。",
@@ -1409,7 +1409,7 @@ const EXERCISES = [
     level: "初级",
     name: "辅助引体向上机",
     en: "Lever Assisted Chin-Up",
-    gif: "media/MaMuGH6.gif",
+    gif: "media/MaMuGH6.webp",
     target: ["背阔肌", "肱二头肌"],
     steps: [
       "根据自身体重选择配重（配重越大越省力）。",
@@ -1434,7 +1434,7 @@ const EXERCISES = [
     level: "高级",
     name: "引体向上",
     en: "Pull-Up",
-    gif: "media/lBDjFxJ.gif",
+    gif: "media/lBDjFxJ.webp",
     target: ["背阔肌", "肱二头肌", "前臂"],
     steps: [
       "正握单杠，握距略宽于肩，手臂完全伸展悬挂。",
@@ -1460,7 +1460,7 @@ const EXERCISES = [
     level: "中级",
     name: "杠铃划船",
     en: "Barbell Bent-Over Row",
-    gif: "media/eZyBC3j.gif",
+    gif: "media/eZyBC3j.webp",
     target: ["上背部", "背阔肌", "肱二头肌"],
     steps: [
       "双脚与肩同宽站立，膝盖微屈，髋部前倾俯身，背部挺直。",
@@ -1486,7 +1486,7 @@ const EXERCISES = [
     level: "初级",
     name: "哑铃俯身划船",
     en: "Dumbbell Bent-Over Row",
-    gif: "media/BJ0Hz5L.gif",
+    gif: "media/BJ0Hz5L.webp",
     target: ["上背部", "背阔肌", "肱二头肌"],
     steps: [
       "双脚与肩同宽站立，膝盖微屈，双手持哑铃于体前。",
@@ -1512,7 +1512,7 @@ const EXERCISES = [
     level: "中级",
     name: "直臂下拉",
     en: "Straight-Arm Pulldown",
-    gif: "media/x69MAlq.gif",
+    gif: "media/x69MAlq.webp",
     target: ["背阔肌"],
     steps: [
       "将直杆或绳索挂在高位滑轮上，面对器械站立。",
@@ -1538,7 +1538,7 @@ const EXERCISES = [
     level: "初级",
     name: "器械T杠划船",
     en: "Lever T Bar Row",
-    gif: "media/aaXr7ld.gif",
+    gif: "media/aaXr7ld.webp",
     target: ["上背部", "肱二头肌", "前臂"],
     steps: [
       "调整座椅高度，胸口贴住靠垫，双脚踩实踏板。",
@@ -1563,7 +1563,7 @@ const EXERCISES = [
     level: "初级",
     name: "高位划船机",
     en: "Lever High Row",
-    gif: "media/nZZZy9m.gif",
+    gif: "media/nZZZy9m.webp",
     target: ["上背部", "肱二头肌", "三角肌后束"],
     steps: [
       "调整座椅高度，胸口贴住靠垫坐好，双脚踩实。",
@@ -1588,7 +1588,7 @@ const EXERCISES = [
     level: "初级",
     name: "器械直臂下压",
     en: "Lever Pullover",
-    gif: "media/4U7iLb5.gif",
+    gif: "media/4U7iLb5.webp",
     target: ["背阔肌", "肱三头肌", "三角肌"],
     steps: [
       "调整座椅与把手位置，背部贴紧靠垫坐好。",
@@ -1614,7 +1614,7 @@ const EXERCISES = [
     level: "初级",
     name: "舒华提臀训练器",
     en: "SHUA Glute Trainer (SH-G7810)",
-    gif: "media/qg2PGl6.gif",
+    gif: "media/qg2PGl6.webp",
     target: ["臀大肌", "腘绳肌", "核心"],
     steps: [
       "坐在器械凳边缘，上背部靠在垫上，双脚与肩同宽踩实。",
@@ -1640,7 +1640,7 @@ const EXERCISES = [
     level: "初级",
     name: "坐姿髋外展机",
     en: "Lever Seated Hip Abduction",
-    gif: "media/CHpahtl.gif",
+    gif: "media/CHpahtl.webp",
     target: ["臀中肌", "大腿外侧"],
     steps: [
       "坐在器械上，腰背贴紧靠垫，双腿放在膝垫内侧。",
@@ -1665,7 +1665,7 @@ const EXERCISES = [
     level: "初级",
     name: "坐姿后踢腿机",
     en: "Lever Hip Extension",
-    gif: "media/OPqShYN.gif",
+    gif: "media/OPqShYN.webp",
     target: ["臀大肌", "腘绳肌"],
     steps: [
       "调节座椅和脚踏板，背部贴紧靠背坐好，双手握紧扶手。",
@@ -1690,7 +1690,7 @@ const EXERCISES = [
     level: "初级",
     name: "杠铃臀桥",
     en: "Barbell Glute Bridge",
-    gif: "media/qKBpF7I.gif",
+    gif: "media/qKBpF7I.webp",
     target: ["臀大肌", "腘绳肌"],
     steps: [
       "仰卧，肩胛骨靠在凳沿，双脚踩实地面，膝盖弯曲。",
@@ -1716,7 +1716,7 @@ const EXERCISES = [
     level: "高级",
     name: "硬拉",
     en: "Barbell Deadlift",
-    gif: "media/ila4NZS.gif",
+    gif: "media/ila4NZS.webp",
     target: ["臀大肌", "腘绳肌", "下背部"],
     steps: [
       "双脚与肩同宽站立，杠铃贴近小腿。",
@@ -1742,7 +1742,7 @@ const EXERCISES = [
     level: "中级",
     name: "罗马尼亚硬拉",
     en: "Romanian Deadlift",
-    gif: "media/wQ2c4XD.gif",
+    gif: "media/wQ2c4XD.webp",
     target: ["臀大肌", "腘绳肌"],
     steps: [
       "双脚与肩同宽站立，正手握杠，握距略宽于肩。",
@@ -1768,7 +1768,7 @@ const EXERCISES = [
     level: "中级",
     name: "壶铃摆动",
     en: "Kettlebell Swing",
-    gif: "media/UHJlbu3.gif",
+    gif: "media/UHJlbu3.webp",
     target: ["臀大肌", "腘绳肌", "核心"],
     steps: [
       "双脚与肩同宽站立，双手持壶铃于身体前方。",
@@ -1794,7 +1794,7 @@ const EXERCISES = [
     level: "中级",
     name: "相扑硬拉",
     en: "Sumo Deadlift",
-    gif: "media/KgI0tqW.gif",
+    gif: "media/KgI0tqW.webp",
     target: ["臀大肌", "腘绳肌", "股四头肌"],
     steps: [
       "双脚宽站位，脚尖外展约 45°，杠铃置于脚掌中心。",
@@ -1820,7 +1820,7 @@ const EXERCISES = [
     level: "初级",
     name: "绳索后踢腿",
     en: "Cable Kickback",
-    gif: "media/Kpajagk.gif",
+    gif: "media/Kpajagk.webp",
     target: ["臀大肌"],
     steps: [
       "将滑轮调至低位，脚踝绑上绳索，面对器械站立。",
@@ -1846,7 +1846,7 @@ const EXERCISES = [
     level: "初级",
     name: "反向背伸展机",
     en: "Lever Reverse Hyperextension",
-    gif: "media/Krmb3cB.gif",
+    gif: "media/Krmb3cB.webp",
     target: ["臀大肌", "腘绳肌", "下背部"],
     steps: [
       "俯卧在器械上，髋部抵住靠垫，双脚固定于踏板。",
@@ -1872,7 +1872,7 @@ const EXERCISES = [
     level: "中级",
     name: "史密斯髋抬",
     en: "Smith Hip Raise",
-    gif: "media/CqhoytW.gif",
+    gif: "media/CqhoytW.webp",
     target: ["臀大肌", "腘绳肌", "核心"],
     steps: [
       "将史密斯杠铃调到合适高度，背部靠垫，双脚踩实与肩同宽。",
@@ -1899,7 +1899,7 @@ const EXERCISES = [
     level: "初级",
     name: "舒华坐式蹬腿训练器",
     en: "SHUA Seated Leg Press (SH-G6809)",
-    gif: "media/7zdxRTl.gif",
+    gif: "media/7zdxRTl.webp",
     target: ["股四头肌", "臀大肌", "腘绳肌"],
     steps: [
       "调整座椅位置，背部贴紧靠垫，双脚与肩同宽踩实踏板。",
@@ -1924,7 +1924,7 @@ const EXERCISES = [
     level: "初级",
     name: "腿举机",
     en: "Leg Press",
-    gif: "media/10Z2DXU.gif",
+    gif: "media/10Z2DXU.webp",
     target: ["股四头肌", "臀大肌", "腘绳肌"],
     steps: [
       "调整座椅位置，背部与臀部贴紧靠垫。",
@@ -1950,7 +1950,7 @@ const EXERCISES = [
     level: "初级",
     name: "腿弯举机",
     en: "Lying Leg Curl",
-    gif: "media/17lJ1kr.gif",
+    gif: "media/17lJ1kr.webp",
     target: ["腘绳肌", "小腿"],
     steps: [
       "调整器械，俯卧在垫面上，膝盖对准转轴。",
@@ -1976,7 +1976,7 @@ const EXERCISES = [
     level: "初级",
     name: "腿屈伸机",
     en: "Leg Extension",
-    gif: "media/my33uHU.gif",
+    gif: "media/my33uHU.webp",
     target: ["股四头肌"],
     steps: [
       "调整座椅与靠背，使膝关节对准器械转轴。",
@@ -2002,7 +2002,7 @@ const EXERCISES = [
     level: "中级",
     name: "哈克深蹲",
     en: "Hack Squat",
-    gif: "media/Qa55kX1.gif",
+    gif: "media/Qa55kX1.webp",
     target: ["股四头肌", "臀大肌"],
     steps: [
       "调整靠背，背贴紧垫子，双脚与肩同宽踩在踏板上。",
@@ -2028,7 +2028,7 @@ const EXERCISES = [
     level: "初级",
     name: "史密斯深蹲",
     en: "Smith Machine Squat",
-    gif: "media/jFtipLl.gif",
+    gif: "media/jFtipLl.webp",
     target: ["股四头肌", "臀大肌"],
     steps: [
       "将史密斯杠铃调至肩部高度，杠置于上背斜方肌处。",
@@ -2053,7 +2053,7 @@ const EXERCISES = [
     level: "初级",
     name: "坐姿髋内收机",
     en: "Lever Seated Hip Adduction",
-    gif: "media/oHsrypV.gif",
+    gif: "media/oHsrypV.webp",
     target: ["大腿内收肌"],
     steps: [
       "坐稳，腰背贴垫，双腿放在膝垫外侧。",
@@ -2078,7 +2078,7 @@ const EXERCISES = [
     level: "中级",
     name: "杠铃深蹲",
     en: "Barbell Back Squat",
-    gif: "media/qXTaZnJ.gif",
+    gif: "media/qXTaZnJ.webp",
     target: ["股四头肌", "臀大肌", "腘绳肌"],
     steps: [
       "站立于杠下，将杠铃置于斜方肌上，双脚与肩同宽。",
@@ -2104,7 +2104,7 @@ const EXERCISES = [
     level: "初级",
     name: "哑铃箭步蹲",
     en: "Dumbbell Lunge",
-    gif: "media/ecl28tP.gif",
+    gif: "media/ecl28tP.webp",
     target: ["股四头肌", "臀大肌", "腘绳肌"],
     steps: [
       "双脚与肩同宽站立，双手持哑铃于体侧。",
@@ -2130,7 +2130,7 @@ const EXERCISES = [
     level: "初级",
     name: "站姿提踵",
     en: "Standing Calf Raise",
-    gif: "media/8ozhUIZ.gif",
+    gif: "media/8ozhUIZ.webp",
     target: ["小腿"],
     steps: [
       "双脚与肩同宽站立，杠铃置于斜方肌上（或使用提踵机）。",
@@ -2155,7 +2155,7 @@ const EXERCISES = [
     level: "中级",
     name: "哑铃分腿蹲",
     en: "Dumbbell Split Squat",
-    gif: "media/qx4fgX7.gif",
+    gif: "media/qx4fgX7.webp",
     target: ["股四头肌", "臀大肌"],
     steps: [
       "双手持哑铃，前脚踩地，后脚背搭在凳上。",
@@ -2180,7 +2180,7 @@ const EXERCISES = [
     level: "初级",
     name: "交替腿举机",
     en: "Lever Alternate Leg Press",
-    gif: "media/V07qpXy.gif",
+    gif: "media/V07qpXy.webp",
     target: ["股四头肌", "腘绳肌", "臀大肌"],
     steps: [
       "调整座椅与踏板位置，背部贴紧靠垫，双脚踩实踏板。",
@@ -2206,7 +2206,7 @@ const EXERCISES = [
     level: "初级",
     name: "坐姿提踵机",
     en: "Lever Seated Calf Raise",
-    gif: "media/bOOdeyc.gif",
+    gif: "media/bOOdeyc.webp",
     target: ["比目鱼肌", "腓肠肌"],
     steps: [
       "调整座椅高度，前脚掌踩在踏板上，脚后跟悬空。",
@@ -2232,7 +2232,7 @@ const EXERCISES = [
     level: "初级",
     name: "站姿提踵机",
     en: "Lever Standing Calf Raise",
-    gif: "media/ykUOVze.gif",
+    gif: "media/ykUOVze.webp",
     target: ["腓肠肌", "比目鱼肌"],
     steps: [
       "调整器械高度，肩部抵住垫板，双脚与肩同宽踩实。",
@@ -2259,7 +2259,7 @@ const EXERCISES = [
     level: "中级",
     name: "舒华三头肌训练器",
     en: "SHUA Tricep Extension (SH-G6808)",
-    gif: "media/o8aOcrz.gif",
+    gif: "media/o8aOcrz.webp",
     target: ["肱三头肌", "三角肌"],
     steps: [
       "调整座椅高度使杠铃杆与肩齐平，背部贴紧靠垫。",
@@ -2284,7 +2284,7 @@ const EXERCISES = [
     level: "初级",
     name: "坐姿弯举机",
     en: "Lever Bicep Curl",
-    gif: "media/q6y3OhV.gif",
+    gif: "media/q6y3OhV.webp",
     target: ["肱二头肌"],
     steps: [
       "坐在弯举机上，上臂贴住前垫，肘部对准器械转轴。",
@@ -2308,7 +2308,7 @@ const EXERCISES = [
     level: "初级",
     name: "坐姿三头屈伸机",
     en: "Lever Triceps Extension",
-    gif: "media/Ser9eQp.gif",
+    gif: "media/Ser9eQp.webp",
     target: ["肱三头肌"],
     steps: [
       "调节座椅高度，背部靠紧靠垫坐好。",
@@ -2333,7 +2333,7 @@ const EXERCISES = [
     level: "初级",
     name: "杠铃弯举",
     en: "Barbell Curl",
-    gif: "media/25GPyDY.gif",
+    gif: "media/25GPyDY.webp",
     target: ["肱二头肌", "前臂"],
     steps: [
       "站直，双脚与肩同宽，反手握住杠铃，手掌朝前。",
@@ -2359,7 +2359,7 @@ const EXERCISES = [
     level: "初级",
     name: "哑铃弯举",
     en: "Dumbbell Curl",
-    gif: "media/NbVPDMW.gif",
+    gif: "media/NbVPDMW.webp",
     target: ["肱二头肌", "前臂"],
     steps: [
       "站直，双手持哑铃于体侧，手掌朝前，手臂自然下垂。",
@@ -2385,7 +2385,7 @@ const EXERCISES = [
     level: "初级",
     name: "绳索下压",
     en: "Cable Triceps Pushdown",
-    gif: "media/dU605di.gif",
+    gif: "media/dU605di.webp",
     target: ["肱三头肌", "前臂"],
     steps: [
       "将绳索附件挂在高位滑轮上。",
@@ -2411,7 +2411,7 @@ const EXERCISES = [
     level: "初级",
     name: "哑铃锤式弯举",
     en: "Hammer Curl",
-    gif: "media/slDvUAU.gif",
+    gif: "media/slDvUAU.webp",
     target: ["肱二头肌", "肱肌", "前臂"],
     steps: [
       "站直，双手持哑铃，掌心相对（锤式握法）。",
@@ -2436,7 +2436,7 @@ const EXERCISES = [
     level: "初级",
     name: "EZ杠弯举",
     en: "EZ-Bar Curl",
-    gif: "media/6TG6x2w.gif",
+    gif: "media/6TG6x2w.webp",
     target: ["肱二头肌", "前臂"],
     steps: [
       "站直，反握 EZ 杠，握距与肩同宽。",
@@ -2461,7 +2461,7 @@ const EXERCISES = [
     level: "中级",
     name: "仰卧臂屈伸",
     en: "Skull Crusher",
-    gif: "media/h8LFzo9.gif",
+    gif: "media/h8LFzo9.webp",
     target: ["肱三头肌"],
     steps: [
       "仰卧于凳，双手与肩同宽正握杠铃，手臂伸直至胸部上方。",
@@ -2486,7 +2486,7 @@ const EXERCISES = [
     level: "初级",
     name: "器械正握臂屈伸",
     en: "Lever Overhand Triceps Dip",
-    gif: "media/D5yqP2p.gif",
+    gif: "media/D5yqP2p.webp",
     target: ["肱三头肌", "胸大肌", "三角肌"],
     steps: [
       "调整器械高度，双膝跪在垫板上，双手正握把手。",
@@ -2511,7 +2511,7 @@ const EXERCISES = [
     level: "初级",
     name: "牧师弯举机",
     en: "Lever Preacher Curl",
-    gif: "media/b6hQYMb.gif",
+    gif: "media/b6hQYMb.webp",
     target: ["肱二头肌", "前臂"],
     steps: [
       "调整座椅高度，上臂完全贴住斜垫，反手握把手。",
@@ -2537,7 +2537,7 @@ const EXERCISES = [
     level: "初级",
     name: "罗马椅背屈伸",
     en: "Back Extension",
-    gif: "media/zhMwOwE.gif",
+    gif: "media/zhMwOwE.webp",
     target: ["竖脊肌", "臀大肌"],
     steps: [
       "俯卧在罗马椅上，髋部抵住前端软垫，脚踝固定在后方挡板下。",
@@ -2563,7 +2563,7 @@ const EXERCISES = [
     level: "初级",
     name: "坐姿卷腹机",
     en: "Lever Seated Crunch",
-    gif: "media/ZnJHhMk.gif",
+    gif: "media/ZnJHhMk.webp",
     target: ["腹直肌"],
     steps: [
       "坐在卷腹机上，双脚踩稳，双手握把置于胸前。",
@@ -2587,7 +2587,7 @@ const EXERCISES = [
     level: "初级",
     name: "卷腹",
     en: "Crunch",
-    gif: "media/TFqbd8t.gif",
+    gif: "media/TFqbd8t.webp",
     target: ["腹直肌"],
     steps: [
       "仰卧，膝盖弯曲，双脚踩实地面。",
@@ -2613,7 +2613,7 @@ const EXERCISES = [
     level: "初级",
     name: "平板支撑",
     en: "Forearm Plank",
-    gif: "media/VBAWRPG.gif",
+    gif: "media/VBAWRPG.webp",
     target: ["腹肌", "核心"],
     steps: [
       "俯卧，前臂撑地，肘部位于肩部正下方。",
@@ -2639,7 +2639,7 @@ const EXERCISES = [
     level: "初级",
     name: "俄罗斯转体",
     en: "Russian Twist",
-    gif: "media/XVDdcoj.gif",
+    gif: "media/XVDdcoj.webp",
     target: ["腹斜肌", "腹肌"],
     steps: [
       "坐姿，屈膝，身体微微后仰，收紧核心。",
@@ -2664,7 +2664,7 @@ const EXERCISES = [
     level: "高级",
     name: "悬垂举腿",
     en: "Hanging Leg Raise",
-    gif: "media/I3tsCnC.gif",
+    gif: "media/I3tsCnC.webp",
     target: ["腹直肌", "髋屈肌"],
     steps: [
       "悬挂于单杠，手臂伸直，收紧核心。",
@@ -2689,7 +2689,7 @@ const EXERCISES = [
     level: "初级",
     name: "侧平板支撑",
     en: "Side Plank",
-    gif: "media/VO2qeJg.gif",
+    gif: "media/VO2qeJg.webp",
     target: ["腹斜肌", "核心"],
     steps: [
       "侧卧，前臂撑地，肘部位于肩部正下方。",
@@ -2714,7 +2714,7 @@ const EXERCISES = [
     level: "初级",
     name: "坐姿抬腿卷腹机",
     en: "Lever Seated Leg Raise Crunch",
-    gif: "media/PQ2AtC3.gif",
+    gif: "media/PQ2AtC3.webp",
     target: ["腹直肌", "髋屈肌"],
     steps: [
       "坐于器械上，背部贴紧靠垫，双脚踩在踏板上。",
@@ -2739,7 +2739,7 @@ const EXERCISES = [
     level: "初级",
     name: "器械跪姿扭转",
     en: "Lever Kneeling Twist",
-    gif: "media/sZOR9EV.gif",
+    gif: "media/sZOR9EV.webp",
     target: ["腹直肌", "腹斜肌", "下背部"],
     steps: [
       "调整座椅高度，双膝跪在垫上，上身前倾面对器械。",
@@ -2766,7 +2766,7 @@ const EXERCISES = [
     level: "初级",
     name: "跑步机",
     en: "Treadmill",
-    gif: "media/rjiM4L3.gif",
+    gif: "media/rjiM4L3.webp",
     target: ["心肺功能", "股四头肌", "小腿"],
     steps: [
       "将跑步机的坡度调到适合的强度，从低速度开始。",
@@ -2792,7 +2792,7 @@ const EXERCISES = [
     level: "初级",
     name: "椭圆机",
     en: "Elliptical Trainer",
-    gif: "media/rjtuP6X.gif",
+    gif: "media/rjtuP6X.webp",
     target: ["心肺功能", "股四头肌", "臀部"],
     steps: [
       "调整阻力与坡度至合适水平，踩上踏板并轻握手柄。",
@@ -2818,7 +2818,7 @@ const EXERCISES = [
     level: "初级",
     name: "动感单车",
     en: "Stationary Bike",
-    gif: "media/H1PESYI.gif",
+    gif: "media/H1PESYI.webp",
     target: ["心肺功能", "股四头肌", "小腿"],
     steps: [
       "调整座椅高度：踏板踩到最低点时膝盖微屈约 15-30°。",
@@ -2844,7 +2844,7 @@ const EXERCISES = [
     level: "初级",
     name: "登山机",
     en: "Stair Climber",
-    gif: "media/j9Q5crt.gif",
+    gif: "media/j9Q5crt.webp",
     target: ["心肺功能", "臀大肌", "股四头肌"],
     steps: [
       "将机器速度调整到较低档位，走上台阶并扶稳扶手。",
@@ -2870,7 +2870,7 @@ const EXERCISES = [
     level: "初级",
     name: "跳绳",
     en: "Jump Rope",
-    gif: "media/e1e76I2.gif",
+    gif: "media/e1e76I2.webp",
     target: ["心肺功能", "小腿"],
     steps: [
       "双手握绳柄，绳置于身后，双脚并拢。",
@@ -2895,7 +2895,7 @@ const EXERCISES = [
     level: "中级",
     name: "波比跳",
     en: "Burpee",
-    gif: "media/dK9394r.gif",
+    gif: "media/dK9394r.webp",
     target: ["心肺功能", "全身"],
     steps: [
       "站立，下蹲，双手撑地。",
@@ -2922,7 +2922,7 @@ const EXERCISES = [
     level: "初级",
     name: "站姿体前屈触地拉伸",
     en: "Standing Toe Touch Stretch",
-    gif: "media/BbfB8Gb.gif",
+    gif: "media/BbfB8Gb.webp",
     target: ["腘绳肌", "臀大肌", "下背部"],
     relax: ["leg", "glute", "back", "warmup"],
     steps: [
@@ -2948,7 +2948,7 @@ const EXERCISES = [
     level: "初级",
     name: "站姿股四头肌拉伸",
     en: "Standing Quad Stretch",
-    gif: "media/tFGKm99.gif",
+    gif: "media/tFGKm99.webp",
     target: ["股四头肌", "髋屈肌"],
     relax: ["leg", "glute", "warmup"],
     steps: [
@@ -2974,7 +2974,7 @@ const EXERCISES = [
     level: "初级",
     name: "站姿单脚臀腿拉伸",
     en: "Standing Hip & Glute Stretch",
-    gif: "media/sU5BrfP.gif",
+    gif: "media/sU5BrfP.webp",
     target: ["臀大肌", "腘绳肌"],
     relax: ["glute", "leg"],
     steps: [
@@ -3000,7 +3000,7 @@ const EXERCISES = [
     level: "初级",
     name: "扶墙小腿拉伸",
     en: "Calf Stretch with Hands Against Wall",
-    gif: "media/PzNxakt.gif",
+    gif: "media/PzNxakt.webp",
     target: ["腓肠肌", "比目鱼肌"],
     relax: ["leg", "cardio", "warmup"],
     steps: [
@@ -3026,7 +3026,7 @@ const EXERCISES = [
     level: "初级",
     name: "站姿胸肌拉伸",
     en: "Standing Pec Stretch",
-    gif: "media/chfnQnM.gif",
+    gif: "media/chfnQnM.webp",
     target: ["胸大肌", "背阔肌"],
     relax: ["chest", "shoulder"],
     steps: [
@@ -3052,7 +3052,7 @@ const EXERCISES = [
     level: "初级",
     name: "肩后侧拉伸",
     en: "Rear Deltoid Stretch",
-    gif: "media/xifhB5W.gif",
+    gif: "media/xifhB5W.webp",
     target: ["三角肌后束", "斜方肌"],
     relax: ["shoulder", "back"],
     steps: [
@@ -3078,7 +3078,7 @@ const EXERCISES = [
     level: "初级",
     name: "站姿三头肌拉伸",
     en: "Overhead Triceps Stretch",
-    gif: "media/Z5YStHW.gif",
+    gif: "media/Z5YStHW.webp",
     target: ["肱三头肌"],
     relax: ["arm", "chest"],
     steps: [
@@ -3104,7 +3104,7 @@ const EXERCISES = [
     level: "初级",
     name: "站姿体侧拉伸",
     en: "Standing Lateral Stretch",
-    gif: "media/1jXLYEw.gif",
+    gif: "media/1jXLYEw.webp",
     target: ["背阔肌", "躯干侧链", "斜方肌中下束"],
     relax: ["back", "core", "arm"],
     steps: [
