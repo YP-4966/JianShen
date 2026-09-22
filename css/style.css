@@ -349,6 +349,21 @@ img {
   border-color: #fecaca;
 }
 
+/* 舒华器械标识 */
+.shua-badge {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, #e63946, #d62828);
+  padding: 1px 6px;
+  border-radius: 4px;
+  margin-right: 6px;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
 .modal-meta {
   display: flex;
   gap: 8px;

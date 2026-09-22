@@ -46,8 +46,21 @@
   function renderCategories() {
     const frag = document.createDocumentFragment();
 
+    // 器械排序优先级：舒华→固定器械/史密斯机→杠铃→哑铃→绳索→其他
+    var EQUIP_RANK = {
+      "固定器械": 1, "史密斯机": 1,
+      "杠铃": 2, "哑铃": 3, "绳索": 4,
+      "单双杠": 5, "壶铃": 6, "徒手": 7
+    };
+    function equipRank(ex) {
+      if (ex.name.indexOf("舒华") !== -1) return 0;
+      return EQUIP_RANK[ex.equipment] !== undefined ? EQUIP_RANK[ex.equipment] : 8;
+    }
+
     CATEGORIES.forEach((cat) => {
-      const items = EXERCISES.filter((e) => e.cat === cat.id);
+      const items = EXERCISES.filter((e) => e.cat === cat.id).slice().sort(function (a, b) {
+        return equipRank(a) - equipRank(b);
+      });
       if (!items.length) return;
 
       const section = document.createElement("section");
@@ -128,7 +141,7 @@
       '<span class="play-badge">▶ 动图演示</span>' +
       "</div>" +
       '<div class="info">' +
-      "<h3>" + ex.name + "</h3>" +
+      "<h3>" + (ex.name.indexOf("舒华") !== -1 ? '<span class="shua-badge">舒华</span>' : "") + ex.name + "</h3>" +
       '<span class="en">' + ex.en + "</span>" +
       '<div class="meta"><span class="badge equip">' + ex.equipment + '</span><span class="badge level ' + levelClass(ex.level) + '">' + ex.level + "</span></div>" +
       '<div class="tags">' + tags + "</div>" +
@@ -230,7 +243,7 @@
   function openModal(ex) {
     currentEx = ex;
     lastFocus = document.activeElement;
-    modalTitle.textContent = ex.name;
+    modalTitle.innerHTML = (ex.name.indexOf("舒华") !== -1 ? '<span class="shua-badge">舒华</span>' : "") + ex.name;
     modalEn.textContent = ex.en;
 
     modalMedia.innerHTML = '<img src="' + ex.gif + '" alt="' + ex.name + " 动作演示" + '">';
@@ -390,7 +403,7 @@
   logExercise.innerHTML =
     '<option value="">选择动作…</option>' +
     CATEGORIES.map(function (c) {
-      const items = EXERCISES.filter(function (e) { return e.cat === c.id; });
+      const items = EXERCISES.filter(function (e) { return e.cat === c.id; }).slice().sort(function (a, b) { return equipRank(a) - equipRank(b); });
       if (!items.length) return "";
       return '<optgroup label="' + c.name + '">' +
         items.map(function (e) { return '<option value="' + e.id + '">' + e.name + "</option>"; }).join("") +
