@@ -43,19 +43,19 @@
   // ---------- 渲染分类区块 ----------
   const mainEl = $("#main-content");
 
+  // 器械排序优先级：舒华→固定器械/史密斯机→杠铃→哑铃→绳索→其他
+  const EQUIP_RANK = {
+    "固定器械": 1, "史密斯机": 1,
+    "杠铃": 2, "哑铃": 3, "绳索": 4,
+    "单双杠": 5, "壶铃": 6, "徒手": 7
+  };
+  function equipRank(ex) {
+    if (ex.name.indexOf("舒华") !== -1) return 0;
+    return EQUIP_RANK[ex.equipment] !== undefined ? EQUIP_RANK[ex.equipment] : 8;
+  }
+
   function renderCategories() {
     const frag = document.createDocumentFragment();
-
-    // 器械排序优先级：舒华→固定器械/史密斯机→杠铃→哑铃→绳索→其他
-    var EQUIP_RANK = {
-      "固定器械": 1, "史密斯机": 1,
-      "杠铃": 2, "哑铃": 3, "绳索": 4,
-      "单双杠": 5, "壶铃": 6, "徒手": 7
-    };
-    function equipRank(ex) {
-      if (ex.name.indexOf("舒华") !== -1) return 0;
-      return EQUIP_RANK[ex.equipment] !== undefined ? EQUIP_RANK[ex.equipment] : 8;
-    }
 
     CATEGORIES.forEach((cat) => {
       const items = EXERCISES.filter((e) => e.cat === cat.id).slice().sort(function (a, b) {
@@ -581,7 +581,7 @@
   // ---------- 初始化 ----------
   // 在原生 App（Capacitor）内隐藏"下载安卓 App"入口
   if (typeof window.Capacitor !== "undefined" && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform()) {
-    var meDownload = $("#me-download");
+    const meDownload = $("#me-download");
     if (meDownload) meDownload.style.display = "none";
   }
   $("#stat-total").textContent = EXERCISES.length;
@@ -598,15 +598,15 @@
   }, { passive: true });
 
   // ---------- 下拉刷新 ----------
-  var ptrEl = document.createElement("div");
+  const ptrEl = document.createElement("div");
   ptrEl.id = "ptr-indicator";
   ptrEl.innerHTML = '<span class="ptr-arrow">↓</span><span class="ptr-text">下拉刷新</span>';
   document.body.appendChild(ptrEl);
 
-  var ptrStartY = 0;
-  var ptrPulling = false;
-  var ptrDist = 0;
-  var ptrThreshold = 70;
+  let ptrStartY = 0;
+  let ptrPulling = false;
+  let ptrDist = 0;
+  const ptrThreshold = 70;
 
   document.addEventListener("touchstart", function (e) {
     if (window.scrollY > 5) return;
@@ -617,7 +617,7 @@
 
   document.addEventListener("touchmove", function (e) {
     if (!ptrPulling) return;
-    var dy = e.touches[0].clientY - ptrStartY;
+    let dy = e.touches[0].clientY - ptrStartY;
     if (dy < 0) { ptrPulling = false; return; }
     ptrDist = dy;
     ptrEl.style.opacity = Math.min(1, dy / ptrThreshold);

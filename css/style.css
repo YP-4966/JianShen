@@ -3,6 +3,7 @@
   --bg: #f7f9fb;
   --card-bg: #ffffff;
   --text: #1f2937;
+  --text-main: #1f2937;
   --text-muted: #6b7280;
   --primary: #10b981;
   --primary-soft: #d1fae5;
@@ -31,6 +32,7 @@ body {
   color: var(--text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  padding-bottom: 62px;
 }
 
 a {
@@ -1138,10 +1140,6 @@ img {
 }
 
 /* ========== 底部菜单栏 ========== */
-body {
-  padding-bottom: 62px;
-}
-
 .tab-bar {
   position: fixed;
   left: 0;

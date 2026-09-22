@@ -502,7 +502,6 @@ const EXERCISES = [
       "腰部离凳或臀部滑动。"
     ]
   },
-
   {
     id: "lever-seated-chest-press",
     cat: "chest",
@@ -584,7 +583,7 @@ const EXERCISES = [
   {
     id: "smith-machine-bench-press",
     cat: "chest",
-    equipment: "固定器械",
+    equipment: "史密斯机",
     level: "初级",
     name: "史密斯卧推",
     en: "Smith Machine Bench Press",
@@ -888,7 +887,6 @@ const EXERCISES = [
       "腰部离凳拱起借力。"
     ]
   },
-
   {
     id: "machine-shoulder-press",
     cat: "shoulder",
@@ -1300,7 +1298,6 @@ const EXERCISES = [
       "耸肩或手臂代偿过多。"
     ]
   },
-
   {
     id: "lat-pulldown",
     cat: "back",
@@ -1636,7 +1633,6 @@ const EXERCISES = [
       "杠铃位置滑向腹部。"
     ]
   },
-
   {
     id: "lever-seated-hip-abduction",
     cat: "glute",
@@ -1921,7 +1917,6 @@ const EXERCISES = [
       "背部离开靠垫，用腰部顶。"
     ]
   },
-
   {
     id: "leg-press",
     cat: "leg",
@@ -2029,7 +2024,7 @@ const EXERCISES = [
   {
     id: "smith-machine-squat",
     cat: "leg",
-    equipment: "固定器械",
+    equipment: "史密斯机",
     level: "初级",
     name: "史密斯深蹲",
     en: "Smith Machine Squat",
@@ -2282,7 +2277,6 @@ const EXERCISES = [
       "下放过快失去控制。"
     ]
   },
-
   {
     id: "lever-bicep-curl",
     cat: "arm",
@@ -3038,7 +3032,7 @@ const EXERCISES = [
     steps: [
       "站立，双脚与肩同宽。",
       "双臂伸直前平举，双手交叉、掌心翻转朝外。",
-      "缓慢向上并向后抬起双臂，感受胸胸与肩背的拉伸。",
+      "缓慢向上并向后抬起双臂，感受胸肌与肩背的拉伸。",
       "保持 15-30 秒，放松后换另一侧。"
     ],
     tips: [
